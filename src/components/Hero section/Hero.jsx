@@ -1,7 +1,7 @@
 
 import React from "react";
 import Herostyles from "./hero.module.css";
-import SkillButton from "./SkillButton";
+import SkillButton from "./skillbutton";
 import { FiDownloadCloud } from "react-icons/fi";
 
 const Hero = ({ currentTheme }) => {
