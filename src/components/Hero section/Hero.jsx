@@ -41,9 +41,7 @@ const Hero = ({ currentTheme }) => {
       <SkillButton name="Figma" positionClasses="bottom-[10%] left-[60%]" zIndex="z-900" />
 
       <div
-        className={`${Herostyles.pfp} ${
-          currentTheme === "light" ? Herostyles.pfpLight : Herostyles.pfpDark
-        }`}
+        className={Herostyles.pfp}
       ></div>
     </div>
   );
