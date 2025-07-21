@@ -129,6 +129,8 @@
 @media (min-width:0px) and (max-width:400px) {
   .headinglight {
     font-size: 30px;
+    font-weight:900;
+    
   }
 
   .headingdark {

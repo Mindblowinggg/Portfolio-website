@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+.educationContainer {
+  padding: 40px 20px;
+  text-align: center;
+  /* Background color set by lightContainer/darkContainer */
+}
+
+.lightContainer {
+  background-color: #f0f2f5; /* Light background for the whole section */
+  color: #333; /* Dark text for light theme */
+}
+
+.darkContainer {
+  background-color: #1a1a1a; /* Dark background for the whole section */
+  color: #e0e0e0; /* Light text for dark theme */
+}
+
+.headingdark {
+  color: gold;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+  
+}
+
+
+.headinglight {
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+  
+}
+
+.educationCards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+.educationCard {
+  background-color: #2a2a2a; /* Default dark card background */
+  color: #f0f0f0; /* Default dark card text */
+  border-radius: 15px;
+  padding: 25px;
+  width: 380px; /* Increased width for better content display */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Dark theme shadow */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.educationCard:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.lightCard {
+  background-color: #ffffff; /* Light card background */
+  color: #444; /* Darker text for light card */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Light theme shadow */
+}
+
+.lightCard:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: #bbb; /* Default timeline text color */
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.lightCard .timeline {
+  color: #777; /* Light theme timeline text color */
+}
+
+.icon {
+  color: gold; /* Icon color */
+  font-size: 1.3em;
+}
+
+.lightCard .icon {
+  color: #ffc107; /* Light theme icon color */
+}
+
+.degreeInfo h3 {
+  margin-bottom: 8px;
+  font-size: 1.8em; /* Larger degree title */
+  color: #fff; /* Default text color for degree title */
+}
+
+.lightCard .degreeInfo h3 {
+  color: #333; /* Light theme text color for degree title */
+}
+
+.major {
+  color: gold; /* Major text color */
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.lightCard .major {
+  color: #e6b300; /* Slightly different gold for light theme major */
+}
+
+.universityLocation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: #ccc; /* Default university/location text */
+  font-size: 1em;
+}
+
+.lightCard .universityLocation {
+  color: #666; /* Light theme university/location text */
+}
+
+.universityIcon,
+.locationIcon {
+  color: gold; /* Icons for university and location */
+  font-size: 1.2em;
+}
+
+.lightCard .universityIcon,
+.lightCard .locationIcon {
+  color: #ffc107; /* Light theme icons */
+}
+
+/* Degree Tags (Graduation/Post Graduation) */
+.degreeTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.95em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.tagIcon {
+  font-size: 1.1em;
+}
+
+.graduationTag {
+  background-color: #444; /* Dark theme graduation tag */
+  color: #fff;
+}
+
+.lightCard .graduationTag {
+  background-color: #e0e0e0; /* Light theme graduation tag */
+  color: #555;
+}
+
+.postGraduationTag {
+  background-color: gold; /* Dark theme post-graduation tag */
+  color: #1a1a1a; /* Dark text for gold tag */
+}
+
+.lightCard .postGraduationTag {
+  background-color: #ffda47; /* Slightly different gold for light theme */
+  color: #000;
+}
+
+
+@media (min-width:0px) and (max-width:400px) {
+
+  .headinglight{
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .headingdark{
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+}
