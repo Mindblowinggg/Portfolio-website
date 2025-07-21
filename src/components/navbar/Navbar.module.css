@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 .navbar {
@@ -7,77 +6,76 @@
   align-items: center;
   background-color: #e7e7e7;
   width: 90%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   position: fixed;
-  top: 10px; 
-  left: 50%; 
+  top: 10px;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+  padding: 0 16px;
 }
 
 .navbarLogo {
   display: flex;
   font-family: "Michroma", sans-serif;
-  font-weight: 800; 
-  font-size: 40px; 
+  font-weight: 800;
+  font-size: 40px;
   letter-spacing: 0.05em;
-  color: black; 
+  color: black;
   justify-content: center;
-   align-items: center;
-   
+  align-items: center;
 }
 
-.navbarLogo>:nth-child(3){
+.navbarLogo> :nth-child(3) {
   font-weight: 400;
 }
-
 
 .navbarMenuContainer {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Space between toggle and menu button */
+  gap: 1rem;
+  /* Space between toggle and menu button */
 }
 
-.themeToggle
- {
+
+.menuButton {
   background-color: black;
-  border: 1px solid #333; /* Darker border for the buttons */
+  border: 1px solid #333;
+  /* Darker border for the buttons */
   color: #efae02;
-  padding: 14px ; 
+  padding: 14px 30px;
+  /* Unified padding */
   cursor: pointer;
   border-radius: 1000px;
   font-size: 1rem;
-  display: flex; /* To align icon/text if you add icons later */
+  display: flex;
+  /* To align icon/text if you add icons later */
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-.menuButton{background-color: black;
-  border: 1px solid #333; /* Darker border for the buttons */
-  color: #efae02;
-  padding: 14px 30px; 
-  cursor: pointer;
-  border-radius: 1000px;
-  font-size: 1rem;
-  display: flex; /* To align icon/text if you add icons later */
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease, border-color 0.3s ease;}
 
-.themeToggle:hover,
+
 .menuButton:hover {
-  background-color: #333; /* Slightly darker on hover */
+  background-color: #333;
+  /* Slightly darker on hover */
   border-color: #555;
 }
-
-
 
 .amanKaharLight {
   color: black;
 }
 
-/* Aman/Kahar Text Color for Dark Mode */
 .amanKaharDark {
   color: #efae02;
+}
 
+
+
+
+  @media (min-width:0px) and  (max-width: 400px) {
+  .navbarLogo > :nth-child(2),
+  .navbarLogo > :nth-child(3) {
+    display: none;
+  }
 }

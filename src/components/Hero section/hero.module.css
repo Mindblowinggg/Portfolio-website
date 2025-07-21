@@ -32,49 +32,71 @@
 
 .darkContainer {
   background-color: #000000;
-  
+
 }
 
 
 .lightContainer {
   background-color: #ffffff;
   border-bottom: #a27b5c solid;
- 
+
 }
 
 .headingDark {
-  color: white; 
+  color: white;
 }
 
 .headingLight {
-  color: #333333; 
+  color: #333333;
 }
 
-.spanlight{
+.spanlight {
   color: rgb(0, 0, 0);
 
 }
 
-.ptaglight{
+.ptaglight {
   color: black;
   font-weight: 500;
- 
-} 
 
-.ptagdark{
-  color: white;
- 
 }
-  
+
+.ptagdark {
+  color: white;
+
+}
+
 
 .resumeBtnDark {
   color: white;
-  border-color: #efae02; 
-  background-color: transparent; 
+  border-color: #efae02;
+  background-color: transparent;
 }
 
 .resumeBtnLight {
-  color: #333333; 
-  border-color: #000000; 
-  background-color: #f0f0f0; 
+  color: #333333;
+  border-color: #000000;
+  background-color: #f0f0f0;
+}
+
+@media (min-width:0px) and (max-width:400px) {
+
+  .container{
+    height: 600px;
+  }
+
+  .headingDark {
+
+    font-size: 25px;
+    width: 300px;
+    text-align: center;
+
+  }
+.pfp{
+  width: 350px;
+  height: 300px;
+  bottom: 70px;
+}
+
+
 }
