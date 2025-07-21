@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+.aboutMeContainer {
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  /* REMOVE background-color from here. It will be set by lightContainer/darkContainer */
+}
+
+.lightContainer {
+  background-color: white; /* For light mode */
+  color: #333; /* Change text color for light mode for better contrast */
+}
+.darkContainer {
+  background-color: black; /* For dark mode */
+  color: #fff; /* Keep text white for dark mode */
+}
+
+.headinglight {
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+}
+.headingdark {
+  color: gold;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+}
+
+
+.contentSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.hobbySection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.hobbyTextlight {
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: "Michroma", sans-serif;
+  font-weight: 800;
+}
+
+.hobbyTextdark {
+  color: gold;
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: "Michroma", sans-serif;
+  font-weight: 800;
+}
+
+.interestTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  /* Add styling for tags in light/dark mode if needed */
+  background-color: #333; /* Default for tags, override in light/dark if needed */
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+/* Optional: Adjust tag colors for light mode for better visibility */
+.lightContainer .tag {
+  background-color: #eee; /* Lighter background for tags in light mode */
+  color: #000; /* Darker text for tags in light mode */
+}
+
+
+.experienceCard {
+  background-color: #333; /* Default for experience card, override in light/dark if needed */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Optional: Adjust experience card colors for light mode */
+.lightContainer .experienceCard {
+  background-color: #eee;
+  color: #000;
+}
+
+
+.description {
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: #333; /* Default for description, override in light/dark if needed */
+  border-radius: 20px;
+}
+
+/* Optional: Adjust description colors for light mode */
+.lightContainer .description {
+  background-color: #eee;
+  color: #000;
+}

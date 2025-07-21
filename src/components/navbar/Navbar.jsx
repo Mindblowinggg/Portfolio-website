@@ -42,7 +42,7 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
               ? Styles.menubtnLight
               : Styles.menubtnDark
           }`}>
-          <span className="text-white hidden sm:flex mr-2">Menu</span> 
+          
           <RiMenu4Fill  className={` size-5 ${
             currentTheme === "light"
               ? Styles.menuLight
