@@ -9,10 +9,7 @@ const DarkModeBtn = ({ currentTheme, onToggle }) => {
   return (
     <label className="switch"> {/* 'class' की जगह 'className' का उपयोग करें */}
       <input
-        // 'checked' prop को currentTheme के हिसाब से सेट करें।
-        // अगर currentTheme 'dark' है, तो चेकबॉक्स checked दिखेगा।
         checked={currentTheme === 'light'}
-        // जब इनपुट पर क्लिक हो, तो 'onToggle' फ़ंक्शन को कॉल करें।
         onClick={onToggle}
         id="checkbox" 
         type="checkbox"

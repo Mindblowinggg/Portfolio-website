@@ -23,6 +23,15 @@
   color: black;
 }
 
+.modetext{
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+  width: 80px;
+
+}
+
 .navbarLogo {
   display: flex;
   font-family: "Michroma", sans-serif;

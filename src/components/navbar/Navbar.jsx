@@ -3,6 +3,8 @@ import Styles from "./Navbar.module.css";
 import logo from "/A.png";
 import DarkModeToggle from "./DarkModeBtn";
 import { RiMenu4Fill } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+
 
 const Navbar = ({ currentTheme, onToggleTheme }) => {
   return (
@@ -35,20 +37,35 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
       </div>
 
       <div className={Styles.navbarMenuContainer}>
+        <span className={Styles.modetext}>
+          {currentTheme === "light" ? (
+            <>
+              {"Switch to "}
+              <br />
+              {" Dark Mode"}
+            </>
+          ) : (
+           <>
+              {"Switch to "}
+              <br />
+              {" Light Mode"}
+            </>
+          )}
+        </span>
+
+        <IoIosArrowRoundForward/>
         <DarkModeToggle currentTheme={currentTheme} onToggle={onToggleTheme} />
 
-        <button className={` ${
-            currentTheme === "light"
-              ? Styles.menubtnLight
-              : Styles.menubtnDark
-          }`}>
-          
-          <RiMenu4Fill  className={` size-5 ${
-            currentTheme === "light"
-              ? Styles.menuLight
-              : Styles.menuDark
-          }`}/>
-
+        <button
+          className={` ${
+            currentTheme === "light" ? Styles.menubtnLight : Styles.menubtnDark
+          }`}
+        >
+          <RiMenu4Fill
+            className={` size-5 ${
+              currentTheme === "light" ? Styles.menuLight : Styles.menuDark
+            }`}
+          />
         </button>
       </div>
     </nav>
