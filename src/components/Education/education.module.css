@@ -45,9 +45,9 @@
   color: #f0f0f0; /* Default dark card text */
   border-radius: 15px;
   padding: 25px;
-  width: 380px; /* Increased width for better content display */
+  width: 500px; /* Increased width for better content display */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Dark theme shadow */
-  text-align: left;
+  text-align:center;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
@@ -69,6 +69,7 @@
 .timeline {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 18px;
   color: #bbb; /* Default timeline text color */
@@ -112,6 +113,7 @@
 .universityLocation {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-top: 10px;
   color: #ccc; /* Default university/location text */

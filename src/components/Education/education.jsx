@@ -18,15 +18,16 @@ const Education = ({ currentTheme }) => {
         Education
       </h2>
       <div className={styles.educationCards}>
+
         {/* Card for Graduation */}
         <div
           className={`${styles.educationCard} ${
-            currentTheme === "light" ? styles.lightCard : "" // Apply lightCard class only if theme is light
+            currentTheme === "light" ? styles.lightCard : "" 
           }`}
         >
           <div className={styles.timeline}>
             <FaCalendarAlt className={styles.icon} />
-            <span>2017 - 2020</span>
+            <span>2021 - 2025</span>
           </div>
           <div className={styles.degreeInfo}>
             <div className={`${styles.degreeTag} ${styles.graduationTag}`}>
@@ -34,40 +35,11 @@ const Education = ({ currentTheme }) => {
               <span>Graduation</span>
             </div>
             <h3>
-              Bachelor's Degree <span className={styles.major}>BCA</span>
+              Bachelor's Degree <br /><span className={styles.major}>CSE</span>
             </h3>
             <p className={styles.universityLocation}>
-              <GiGraduateCap className={styles.universityIcon} /> Veer Narmad
-              South Gujarat University
-            </p>
-            <p className={styles.universityLocation}>
-              <FaMapMarkerAlt className={styles.locationIcon} /> Surat, Gujarat,
-              India
-            </p>
-          </div>
-        </div>
-
-        {/* Card for Post Graduation */}
-        <div
-          className={`${styles.educationCard} ${
-            currentTheme === "light" ? styles.lightCard : "" // Apply lightCard class only if theme is light
-          }`}
-        >
-          <div className={styles.timeline}>
-            <FaCalendarAlt className={styles.icon} />
-            <span>2020 - 2022</span>
-          </div>
-          <div className={styles.degreeInfo}>
-            <div className={`${styles.degreeTag} ${styles.postGraduationTag}`}>
-              <GiGraduateCap className={styles.tagIcon} />
-              <span>Post Graduation</span>
-            </div>
-            <h3>
-              Master's Degree <span className={styles.major}>MCA</span>
-            </h3>
-            <p className={styles.universityLocation}>
-              <GiGraduateCap className={styles.universityIcon} /> Parul
-              University
+              <GiGraduateCap className={styles.universityIcon} />
+              Parul University
             </p>
             <p className={styles.universityLocation}>
               <FaMapMarkerAlt className={styles.locationIcon} /> Vadodara,
