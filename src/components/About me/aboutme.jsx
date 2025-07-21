@@ -26,11 +26,7 @@ const AboutMe = ({ currentTheme }) => {
         experiences. My expertise lies in leveraging cutting-edge technologies
         such as ReactJS, NextJS, Apollo GraphQL, Redux, React Query, and various
         UI frameworks including Material UI, NextUI, SCSS, Tailwind CSS, Chakra
-        UI, and Bootstrap. I take pride in my ability to design seamless user
-        interfaces and components that align perfectly with the intended
-        aesthetic, creating responsive websites that adapt gracefully to any
-        device. My skill set also extends to proficient API integration,
-        ensuring the seamless flow of data between the front end and back end.
+        UI, and Bootstrap.
       </p>
 
       <div className={styles.hobbySection}>

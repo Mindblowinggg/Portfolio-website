@@ -101,9 +101,10 @@
 
   }
 .pfp{
-  width: 350px;
-  height: 300px;
+  max-width: 350px;
+  max-height: 300px;
   bottom: 70px;
+  left: 45%;
 }
 
 

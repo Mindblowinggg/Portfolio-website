@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+.certificatesContainer {
+  padding: 40px 20px;
+  text-align: center;
+  
+  /* Background color set by lightContainer/darkContainer */
+}
+
+.lightContainer {
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.darkContainer {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.headerlight {
+  color: black;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+ 
+}
+
+.headerdark {
+  color: gold;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+ 
+}
+
+.certificateCards {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens, or center a single card */
+}
+
+.certificateCard {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border-radius: 15px;
+  padding: 25px;
+  width: 500px; /* Consistent width for the card */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Dark theme shadow */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certificateCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.lightCard {
+  background-color: #ffffff;
+  color: #444;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Light theme shadow */
+}
+
+.lightCard:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.certificateIcon {
+  font-size: 2.5em;
+  color: gold;
+}
+
+.lightCard .certificateIcon {
+  color: #ffc107;
+}
+
+.certificateTitle {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  flex-grow: 1;
+}
+
+.viewButton {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center;
+}
+
+.viewButton:hover {
+  background-color: #666;
+  transform: translateY(-2px);
+}
+
+.lightCard .viewButton {
+  background-color: #eee;
+  color: #333;
+}
+
+.lightCard .viewButton:hover {
+  background-color: #ddd;
+}
+
+.viewIcon {
+  font-size: 1.1em;
+}
+
+
+@media (min-width:0px) and (max-width:400px) {
+
+  .headerlight{
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .headerdark{
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+
+  
+}
