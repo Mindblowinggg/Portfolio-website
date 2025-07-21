@@ -2,6 +2,7 @@ import React from "react";
 import Styles from "./Navbar.module.css";
 import logo from "/A.png";
 import DarkModeToggle from "./DarkModeBtn";
+import { RiMenu4Fill } from "react-icons/ri";
 
 const Navbar = ({ currentTheme, onToggleTheme }) => {
   return (
@@ -36,8 +37,18 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
       <div className={Styles.navbarMenuContainer}>
         <DarkModeToggle currentTheme={currentTheme} onToggle={onToggleTheme} />
 
-        <button className={Styles.menuButton}>
-          <span className="text-white hidden sm:flex mr-2">Menu</span> ☰
+        <button className={` ${
+            currentTheme === "light"
+              ? Styles.menubtnLight
+              : Styles.menubtnDark
+          }`}>
+          <span className="text-white hidden sm:flex mr-2">Menu</span> 
+          <RiMenu4Fill  className={` size-5 ${
+            currentTheme === "light"
+              ? Styles.menuLight
+              : Styles.menuDark
+          }`}/>
+
         </button>
       </div>
     </nav>
