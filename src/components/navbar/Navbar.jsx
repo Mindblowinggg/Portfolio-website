@@ -37,6 +37,7 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
       </div>
 
       <div className={Styles.navbarMenuContainer}>
+        <div className="flex justify-center items-center">
         <span className={Styles.modetext}>
           {currentTheme === "light" ? (
             <>
@@ -54,6 +55,7 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
         </span>
 
         <IoIosArrowRoundForward/>
+        </div>
         <DarkModeToggle currentTheme={currentTheme} onToggle={onToggleTheme} />
 
         <button

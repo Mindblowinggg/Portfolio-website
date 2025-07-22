@@ -12,7 +12,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  padding: 0 16px;
+  padding: 0 12px;
 }
 
 .menuDark{
@@ -27,7 +27,6 @@
   color: black;
   font-size: 12px;
   text-align: center;
-  padding: 5px;
   width: 80px;
 
 }
@@ -60,7 +59,7 @@
   border: 1px solid #333;
   /* Darker border for the buttons */
   color: #efae02;
-  padding: 14px 30px;
+  padding: 14px;
   /* Unified padding */
   cursor: pointer;
   border-radius: 1000px;
@@ -77,7 +76,7 @@
   border: 1px solid #333;
   /* Darker border for the buttons */
   color: #efae02;
-  padding: 14px 30px;
+  padding: 14px;
   /* Unified padding */
   cursor: pointer;
   border-radius: 1000px;
