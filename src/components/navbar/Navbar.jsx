@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Styles from "./Navbar.module.css";
 import logo from "/A.png";
 import DarkModeToggle from "./DarkModeBtn";
-import { RiMenu4Fill } from "react-icons/ri";
+import { RiMenu4Fill, RiCloseFill } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-
 const Navbar = ({ currentTheme, onToggleTheme }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen); // Toggles the state between true and false
+  };
+
   return (
     <nav
       className={`${Styles.navbar} ${
@@ -38,37 +43,56 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
 
       <div className={Styles.navbarMenuContainer}>
         <div className="flex justify-center items-center">
-        <span className={Styles.modetext}>
-          {currentTheme === "light" ? (
-            <>
-              {"Switch to "}
-              <br />
-              {" Dark Mode"}
-            </>
-          ) : (
-           <>
-              {"Switch to "}
-              <br />
-              {" Light Mode"}
-            </>
-          )}
-        </span>
+          <span className={Styles.modetext}>
+            {currentTheme === "light" ? (
+              <>
+                {"Switch to "}
+                <br />
+                {" Dark Mode"}
+              </>
+            ) : (
+              <>
+                {"Switch to "}
+                <br />
+                {" Light Mode"}
+              </>
+            )}
+          </span>
 
-        <IoIosArrowRoundForward/>
+          <IoIosArrowRoundForward />
         </div>
         <DarkModeToggle currentTheme={currentTheme} onToggle={onToggleTheme} />
-
-        <button
-          className={` ${
-            currentTheme === "light" ? Styles.menubtnLight : Styles.menubtnDark
-          }`}
-        >
-          <RiMenu4Fill
-            className={` size-5 ${
-              currentTheme === "light" ? Styles.menuLight : Styles.menuDark
+        <div className="relative">
+          <button
+            onClick={() => toggleMenu()}
+            className={` ${
+              currentTheme === "light"
+                ? Styles.menubtnLight
+                : Styles.menubtnDark
             }`}
-          />
-        </button>
+          >
+            {/* Conditional Rendering of Icons */}
+            {menuOpen ? (
+              <RiCloseFill
+                className={` size-5 ${
+                  currentTheme === "light" ? Styles.menuLight : Styles.menuDark
+                }`}
+              />
+            ) : (
+              <RiMenu4Fill
+                className={` size-5 ${
+                  currentTheme === "light" ? Styles.menuLight : Styles.menuDark
+                }`}
+              />
+            )}
+          </button>
+        </div>
+        {/* --- CONDITIONAL MENU DIV --- */}
+        {menuOpen && (
+          <div className={Styles.menudiv}>
+            <a>Projects</a>
+          </div>
+        )}
       </div>
     </nav>
   );
