@@ -81,7 +81,9 @@
 
 @media (min-width:0px) and (max-width:400px) {
 
-  .container{
+
+
+  .container {
     height: 600px;
   }
 
@@ -100,12 +102,11 @@
     text-align: center;
 
   }
-.pfp{
-  max-width: 350px;
-  max-height: 300px;
-  bottom: 70px;
-  left: 45%;
-}
+
+  .pfp {
+    scale: 0.65;
+    left: 28%;
+  }
 
 
 }
