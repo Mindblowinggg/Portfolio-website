@@ -110,7 +110,7 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
                 ? Styles.drop1divlight
                 : Styles.drop1divdark
             }`}>
-            <a >project 1</a>
+            <a href="https://example-eight-fawn.vercel.app/" target="blank" >project 1</a>
           </div>
         )}
           </div>
