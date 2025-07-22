@@ -12,9 +12,14 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    if (menuOpen) { 
+    if (menuOpen) {
       setopendropdown(false);
-    } 
+    }
+  };
+
+  const closeAllMenus = () => {
+    setMenuOpen(false);
+    setopendropdown(false);
   };
 
   return (
@@ -95,28 +100,35 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
         {/* --- CONDITIONAL MENU DIV --- */}
         {menuOpen && (
           <div
-            className={` relative ${ 
+            className={` relative ${
               currentTheme === "light"
                 ? Styles.menudivlight
                 : Styles.menudivdark
             }`}
           >
-            <a className="flex justify-center items-center" onClick={()=>setopendropdown(!opendropdown)}>Projects {opendropdown ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</a>
-            
-            
-            {opendropdown && (
-          <div className={` absolute ${ 
-              currentTheme === "light"
-                ? Styles.drop1divlight
-                : Styles.drop1divdark
-            }`}>
-            <a href="https://example-eight-fawn.vercel.app/" target="blank" >project 1</a>
-          </div>
-        )}
-          </div>
-        )}
+            <a
+              className="flex justify-center items-center"
+              onClick={() => setopendropdown(!opendropdown)}
+            >
+              Projects{" "}
+              {opendropdown ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+            </a>
 
-        
+            {opendropdown && (
+              <div
+                className={` absolute ${
+                  currentTheme === "light"
+                    ? Styles.drop1divlight
+                    : Styles.drop1divdark
+                }`}
+              >
+                <a href="https://example-eight-fawn.vercel.app/" target="blank" onClick={closeAllMenus}>
+                  project 1
+                </a>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </nav>
   );

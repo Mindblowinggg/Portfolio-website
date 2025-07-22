@@ -85,6 +85,18 @@
   color: #f0f0f0; 
 }
 
+.resumeBtnDark {
+  color: white;
+  border-color: #efae02;
+  background-color: transparent;
+}
+
+.resumeBtnLight {
+  color: #333333;
+  border-color: #000000;
+  background-color: #f0f0f0;
+}
+
 
 
 @media (min-width:0px) and (max-width:400px) {

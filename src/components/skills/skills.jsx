@@ -99,6 +99,19 @@ const Skills = ({ currentTheme }) => {
           </div>
         </div>
       </div>
+
+      <a href="https://github.com/Mindblowinggg" target="blank" className="flex justify-center items-center">
+      <button
+        className={`px-10  flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400   transform transition-transform duration-300 hover:scale-105 ${
+          currentTheme === "light"
+            ? styles.resumeBtnLight
+            : styles.resumeBtnDark
+        }`}
+      >
+        <FaGithub className="mr-2" />
+        See GitHub
+      </button>
+      </a>
     </div>
   );
 };
