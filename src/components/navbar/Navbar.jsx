@@ -4,12 +4,17 @@ import logo from "/A.png";
 import DarkModeToggle from "./DarkModeBtn";
 import { RiMenu4Fill, RiCloseFill } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const Navbar = ({ currentTheme, onToggleTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [opendropdown, setopendropdown] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen); // Toggles the state between true and false
+    setMenuOpen(!menuOpen);
+    if (menuOpen) { 
+      setopendropdown(false);
+    } 
   };
 
   return (
@@ -89,12 +94,29 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
         </div>
         {/* --- CONDITIONAL MENU DIV --- */}
         {menuOpen && (
-          <div className={`${
-                  currentTheme === "light" ? Styles.menudivlight : Styles.menudivdark
-                }`}>
-            <a>Projects</a>
+          <div
+            className={` relative ${ 
+              currentTheme === "light"
+                ? Styles.menudivlight
+                : Styles.menudivdark
+            }`}
+          >
+            <a className="flex justify-center items-center" onClick={()=>setopendropdown(!opendropdown)}>Projects {opendropdown ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</a>
+            
+            
+            {opendropdown && (
+          <div className={` absolute ${ 
+              currentTheme === "light"
+                ? Styles.drop1divlight
+                : Styles.drop1divdark
+            }`}>
+            <a >project 1</a>
           </div>
         )}
+          </div>
+        )}
+
+        
       </div>
     </nav>
   );

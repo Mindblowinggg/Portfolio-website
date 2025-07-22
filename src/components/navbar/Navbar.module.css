@@ -31,6 +31,29 @@
   padding: 20px 60px;
 }
 
+.drop1divlight{
+   position: absolute;
+  top: 100%;
+  color: rgb(0, 0, 0);
+  background-color: #aeacac;
+  padding: 20px 60px;
+   left: 0;
+  width: 100%;
+
+}
+
+.drop1divdark{
+   position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: #292929;
+  padding: 20px 60px;
+
+}
+
+
 
 .menuDark{
   color:#efae02 ;
