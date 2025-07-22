@@ -114,7 +114,7 @@
 @media (max-width: 400px) {
   .socialCard {
     width: 100%; /* Full width on very small screens to stack vertically */
-    max-width: 200px; /* Prevent cards from getting too wide if grid isn't used */
+    max-width: 180px; /* Prevent cards from getting too wide if grid isn't used */
   }
 
   .headinglight{
