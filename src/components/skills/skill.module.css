@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+.skillsContainer {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.lightContainer {
+  background-color: #ffffff; 
+  color: #000000; 
+}
+
+.darkContainer {
+  background-color: #1a1a1a; /* Dark background for the whole section */
+  color: #e0e0e0; /* Light text for dark theme */
+}
+
+.titlelight{
+  font-weight: 900;
+  font-size: 50px;
+  color: black;
+}
+
+
+.titledark{
+  font-weight: 900;
+  font-size: 50px;
+  color: gold;
+}
+
+.heading {
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+}
+
+.headinglight{
+  color: black;
+}
+
+.headingdark{
+  color: gold;
+}
+
+
+.skillsGroup {
+  margin-bottom: 50px; 
+}
+
+.groupHeading {
+  margin-bottom: 20px;
+  font-family: "Michroma", sans-serif;
+ 
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
+  padding: 20px;
+  border-radius: 10px;
+ 
+}
+
+.lightContainer .skillsList {
+  background-color: #ffffff; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.darkContainer .skillsList {
+  background-color: #222; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.lightContainer  {
+  background-color: #f0f0f0; 
+  color: #000000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.darkContainer  {
+  background-color: #333; 
+  color: #f0f0f0; 
+}
+
+
+
+@media (min-width:0px) and (max-width:400px) {
+
+  .headinglight{
+    font-size: 20px;
+    text-align: center;
+  }
+   .headingdark{
+    font-size: 20px;
+    text-align: center;
+  }
+  
+}
