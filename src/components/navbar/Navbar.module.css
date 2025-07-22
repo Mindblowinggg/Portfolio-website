@@ -15,13 +15,22 @@
   padding: 0 12px;
 }
 
-.menudiv{
+.menudivlight{
+  position: absolute;
+  top: 100%;
+  color: rgb(0, 0, 0);
+  background-color: #aeacac;
+  padding: 20px 60px;
+}
+
+.menudivdark{
   position: absolute;
   top: 100%;
   color: white;
   background-color: #292929;
   padding: 20px 60px;
 }
+
 
 .menuDark{
   color:#efae02 ;

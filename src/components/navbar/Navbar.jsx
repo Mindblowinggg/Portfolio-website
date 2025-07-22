@@ -89,7 +89,9 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
         </div>
         {/* --- CONDITIONAL MENU DIV --- */}
         {menuOpen && (
-          <div className={Styles.menudiv}>
+          <div className={`${
+                  currentTheme === "light" ? Styles.menudivlight : Styles.menudivdark
+                }`}>
             <a>Projects</a>
           </div>
         )}
