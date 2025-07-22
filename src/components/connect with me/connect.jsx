@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Connect.module.css";
+import styles from "./connect.module.css";
 // Import only the necessary icons
 import { FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
