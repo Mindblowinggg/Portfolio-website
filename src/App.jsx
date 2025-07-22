@@ -6,6 +6,8 @@ import AboutMe from "./components/About me/aboutme.jsx";
 import Education from "./components/Education/education.jsx";
 import Certificates from "./components/certificate/certificate.jsx";
 import Skills from "./components/skills/skills.jsx";
+import Connect from "./components/connect with me/connect.jsx";
+
 // './App.css' की अब ज़रूरत नहीं है अगर इसमें सिर्फ body के थीम स्टाइल्स थे
 // अगर आपके पास App.css में कोई और ग्लोबल स्टाइल्स हैं, तो उसे रख सकते हैं
 // import './App.css';
@@ -27,6 +29,7 @@ function App() {
       <Education currentTheme={theme}/>
       <Certificates currentTheme={theme} />
       <Skills currentTheme={theme}/>
+      <Connect  currentTheme={theme} />
     </div>
   );
 }

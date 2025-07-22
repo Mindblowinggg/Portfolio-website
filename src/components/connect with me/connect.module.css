@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+.connectContainer {
+  padding:  20px;
+  text-align: center;
+  /* Background color set by lightContainer/darkContainer */
+}
+
+.lightContainer {
+  background-color: #f0f2f5; /* Light background for the section */
+  color: #333; /* Dark text */
+}
+
+.darkContainer {
+  background-color: #1a1a1a; /* Dark background for the section */
+  color: #e0e0e0; /* Light text */
+}
+
+.heading {
+  color: gold; /* Gold color for the main heading */
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+  font-weight: 900;
+ 
+}
+
+.socialLinksGrid {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 25px; /* Space between cards */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+  padding: 20px;
+}
+
+.socialCard {
+  display: flex;
+  flex-direction: column; /* Icon and text stacked vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 15px; /* Rounded corners for the card */
+  padding: 25px 20px;
+  width: 180px; /* Fixed width for each card */
+  height: 140px; /* Fixed height for consistency */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Light theme shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer; /* Indicate it's clickable */
+  border: 1px solid transparent; /* Placeholder for border on hover */
+}
+
+.lightCard {
+  background-color: #ffffff; /* White background for card */
+  color: #444; /* Dark text */
+}
+
+.darkCard {
+  background-color: #2a2a2a; /* Darker background for card */
+  color: #f0f0f0; /* Lighter text */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Darker shadow */
+}
+
+.socialCard:hover {
+  transform: translateY(-5px); /* Lifts card slightly on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
+  border-color: gold; /* Gold border on hover */
+}
+
+.darkCard:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Even darker shadow on hover in dark mode */
+}
+
+.socialIconWrapper {
+  margin-bottom: 15px; /* Space between icon and text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Fixed size for icon wrapper */
+  height: 60px;
+  background-color: #eee; /* Light background for icon circle */
+  border-radius: 50%; /* Circular shape */
+  transition: background-color 0.3s ease;
+}
+
+.darkCard .socialIconWrapper {
+  background-color: #444; /* Darker background for icon circle in dark mode */
+}
+
+.socialCard:hover .socialIconWrapper {
+  background-color: gold; /* Gold background for icon circle on hover */
+}
+
+.socialIcon {
+  font-size: 2.5em; /* Size of the icon */
+  color: #333; /* Default icon color */
+  transition: color 0.3s ease;
+}
+
+.darkCard .socialIcon {
+  color: #f0f0f0; /* Lighter icon color in dark mode */
+}
+
+.socialCard:hover .socialIcon {
+  color: #1a1a1a; /* Dark text for icon on hover (to contrast with gold background) */
+}
+
+.socialName {
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: center;
+  /* Color is inherited from .socialCard */
+}
+
+
+@media (max-width: 400px) {
+  .socialCard {
+    width: 100%; /* Full width on very small screens to stack vertically */
+    max-width: 200px; /* Prevent cards from getting too wide if grid isn't used */
+  }
+
+  .headinglight{
+    font-size: 30px;
+    color: black;
+  }
+}
