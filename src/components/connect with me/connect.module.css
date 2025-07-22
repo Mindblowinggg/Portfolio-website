@@ -40,8 +40,8 @@
   text-decoration: none; /* Remove underline from links */
   border-radius: 15px; /* Rounded corners for the card */
   padding: 25px 20px;
-  width: 180px; /* Fixed width for each card */
-  height: 140px; /* Fixed height for consistency */
+  width: 100px; /* Fixed width for each card */
+  height: 100px; /* Fixed height for consistency */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Light theme shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   cursor: pointer; /* Indicate it's clickable */
@@ -59,15 +59,8 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Darker shadow */
 }
 
-.socialCard:hover {
-  transform: translateY(-5px); /* Lifts card slightly on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
-  border-color: gold; /* Gold border on hover */
-}
 
-.darkCard:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Even darker shadow on hover in dark mode */
-}
+
 
 .socialIconWrapper {
   margin-bottom: 15px; /* Space between icon and text */
@@ -85,9 +78,6 @@
   background-color: #444; /* Darker background for icon circle in dark mode */
 }
 
-.socialCard:hover .socialIconWrapper {
-  background-color: gold; /* Gold background for icon circle on hover */
-}
 
 .socialIcon {
   font-size: 2.5em; /* Size of the icon */
