@@ -97,5 +97,12 @@
     font-size: 20px;
     text-align: center;
   }
+  .titledark{
+    font-size: 30px;
+  }
+
+  .titlelight{
+    font-size: 30px;
+  }
   
 }
