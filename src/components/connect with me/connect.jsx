@@ -18,7 +18,7 @@ const Connect = ({ currentTheme }) => {
       <div className={styles.socialLinksGrid}>
         {/* LinkedIn Card */}
         <a
-          href="https://www.linkedin.com/in/aman-kahar" // *** Replace with your actual LinkedIn URL ***
+          href="https://www.linkedin.com/in/aman-kahar-111453267/" // *** Replace with your actual LinkedIn URL ***
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles.socialCard} ${
