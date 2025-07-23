@@ -152,4 +152,18 @@
     display: none;
   }
 }
+
+@media (min-width:400px) and  (max-width: 800px) {
+  .navbarLogo > :nth-child(2),
+  .navbarLogo > :nth-child(3) {
+    display: none;
+  }
+
+  .menubtnDark , .menubtnLight{
+    width: 80px;
+  }
+
+  
+ 
+}
     

@@ -1,45 +1,20 @@
 .container {
+  display: flex;
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: #efae02 solid;
+  position: relative; /* Add this to make absolute positioning work relative to .container */
 }
 
 .darkContainer {
   background-color: #000000;
 }
-
-
-.lightContainer {
-  background-color: #ffffff;
-}
-
-.pfp {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 450px;
-  height: 400px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("/pfp.png");
-
-}
-
-
-
-.darkContainer {
-  background-color: #000000;
-
-}
-
 
 .lightContainer {
   background-color: #ffffff;
   border-bottom: #a27b5c solid;
-
 }
 
 .headingDark {
@@ -52,20 +27,16 @@
 
 .spanlight {
   color: rgb(0, 0, 0);
-
 }
 
 .ptaglight {
   color: black;
   font-weight: 500;
-
 }
 
 .ptagdark {
   color: white;
-
 }
-
 
 .resumeBtnDark {
   color: white;
@@ -79,34 +50,45 @@
   background-color: #f0f0f0;
 }
 
-@media (min-width:0px) and (max-width:400px) {
+.imageBottom {
+  position: absolute;
+  bottom: 0; /* Aligns to the bottom */
+  left: 50%; /* Centers horizontally */
+  transform: translateX(-50%); /* Ensures perfect centering */
+}
 
-
-
-  .container {
-    height: 600px;
-  }
-
+@media (min-width: 0px) and (max-width: 400px) {
   .headingDark {
-
     font-size: 25px;
     width: 300px;
     text-align: center;
-
   }
 
   .headingLight {
-
     font-size: 25px;
     width: 300px;
     text-align: center;
+  }
+}
 
+@media (min-width: 400px) and (max-width: 800px) {
+  .headingDark {
+    font-size: 40px;
+    width: 400px;
+    text-align: center;
   }
 
-  .pfp {
-    scale: 0.65;
-    left: 25%;
+  .headingLight {
+    font-size: 40px;
+    width: 400px;
+    text-align: center;
   }
+}
 
-
+@media (min-width: 800px) and (max-width: 1000px) {
+  .headingDark,
+  .headingLight {
+    width: 800px;
+    text-align: center;
+  }
 }

@@ -120,5 +120,10 @@
   .headingdark{
     font-size: 50px;
   }
+   .headinglight{
+    font-size: 50px;
+    color: black;
+  }
+
   
 }
