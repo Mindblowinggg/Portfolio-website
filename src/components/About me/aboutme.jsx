@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./aboutme.module.css"; // Module CSS import
+import styles from "./aboutme.module.css"; 
 import { PiMicrophoneStageFill } from "react-icons/pi";
 import { FaGamepad } from "react-icons/fa";
 import { FaCarSide } from "react-icons/fa";

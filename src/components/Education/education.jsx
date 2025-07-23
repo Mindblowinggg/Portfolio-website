@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./education.module.css";
 import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
-import { GiGraduateCap } from "react-icons/gi"; // For the university icon
+import { GiGraduateCap } from "react-icons/gi"; 
 
 const Education = ({ currentTheme }) => {
   return (
