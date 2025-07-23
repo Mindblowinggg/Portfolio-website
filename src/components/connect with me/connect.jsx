@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./connect.module.css";
-// Import only the necessary icons
 import { FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const Connect = ({ currentTheme }) => {
@@ -18,7 +17,7 @@ const Connect = ({ currentTheme }) => {
       <div className={styles.socialLinksGrid}>
         {/* LinkedIn Card */}
         <a
-          href="https://www.linkedin.com/in/aman-kahar-111453267/" // *** Replace with your actual LinkedIn URL ***
+          href="https://www.linkedin.com/in/aman-kahar-111453267/" 
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles.socialCard} ${
@@ -33,7 +32,7 @@ const Connect = ({ currentTheme }) => {
 
         {/* Instagram Card */}
         <a
-          href="https://www.instagram.com/marc_usb47/" // *** Replace with your actual Instagram URL ***
+          href="https://www.instagram.com/marc_usb47/" 
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles.socialCard} ${

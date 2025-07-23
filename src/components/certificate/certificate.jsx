@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./certificate.module.css";
-import { FaEye } from "react-icons/fa"; // For the View icon
-import { BsFileEarmarkTextFill } from "react-icons/bs"; // For the certificate icon
+import { FaEye } from "react-icons/fa"; 
+import { BsFileEarmarkTextFill } from "react-icons/bs"; 
 
 
-const certificateData = { // Changed to a single object, not an array
+const certificateData = { 
   id: 1,
   title: "UI/UX DESIGNING",
-  viewLink: "https://cert.diceid.com/cid/zdwm69lpfB", // Replace with actual certificate image URL
+  viewLink: "https://cert.diceid.com/cid/zdwm69lpfB", 
 };
 
 const Certificates = ({ currentTheme }) => {
@@ -26,9 +26,9 @@ const Certificates = ({ currentTheme }) => {
       <h2 className={`${
               currentTheme === "light" ? styles.headerlight : styles.headerdark
             }`}>Certificates</h2>
-      <div className={styles.certificateCards}> {/* Keep this div for flex alignment even with one card */}
+      <div className={styles.certificateCards}> 
         <div
-          key={certificateData.id} // Use the single certificate's ID as key
+          key={certificateData.id} 
           className={`${styles.certificateCard} ${
             currentTheme === "light" ? styles.lightCard : ''
           }`}

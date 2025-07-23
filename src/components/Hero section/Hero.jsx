@@ -53,7 +53,7 @@ const Hero = ({ currentTheme }) => {
         </a>
       </div>
 
-      {/* New div for image positioning */}
+      
       <div className={Herostyles.imageBottom}>
         <img src="/pfp.png" />
       </div>

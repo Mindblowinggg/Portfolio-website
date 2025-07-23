@@ -4,7 +4,6 @@
   padding: 40px 20px;
   text-align: center;
   
-  /* Background color set by lightContainer/darkContainer */
 }
 
 .lightContainer {
@@ -38,7 +37,7 @@
   justify-content: center;
   text-align: center;
   gap: 30px;
-  flex-wrap: wrap; /* Allows cards to wrap on smaller screens, or center a single card */
+  flex-wrap: wrap; 
 }
 
 .certificateCard {
@@ -46,10 +45,10 @@
   color: #f0f0f0;
   border-radius: 15px;
   padding: 25px;
-  width: 500px; /* Consistent width for the card */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Dark theme shadow */
+  width: 500px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,7 +63,7 @@
 .lightCard {
   background-color: #ffffff;
   color: #444;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Light theme shadow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
 }
 
 .lightCard:hover {

@@ -1,13 +1,11 @@
-// DarkModeBtn.jsx (या DarkModeToggle.jsx)
-import React from "react"; // अब यहाँ useState या useEffect की ज़रूरत नहीं है
-import "./darkmode.css"; // आपके टॉगल बटन की स्टाइलिंग
 
-// DarkModeBtn कॉम्पोनेंट अब प्रॉप्स लेगा: currentTheme और onToggle
-// currentTheme: यह बताएगा कि अभी कौन सी थीम एक्टिव है ('light' या 'dark')
-// onToggle: यह एक फ़ंक्शन होगा जिसे बटन क्लिक होने पर कॉल करना है
+import React from "react"; 
+import "./darkmode.css"; 
+
+
 const DarkModeBtn = ({ currentTheme, onToggle }) => {
   return (
-    <label className="switch"> {/* 'class' की जगह 'className' का उपयोग करें */}
+    <label className="switch"> 
       <input
         checked={currentTheme === 'light'}
         onClick={onToggle}
@@ -15,7 +13,7 @@ const DarkModeBtn = ({ currentTheme, onToggle }) => {
         type="checkbox"
       />
       <span className="slider">
-        {/* आपके SVG और स्टार्स जो टॉगल बटन का डिज़ाइन बनाते हैं */}
+        
         <div className="star star_1"></div>
         <div className="star star_2"></div>
         <div className="star star_3"></div>

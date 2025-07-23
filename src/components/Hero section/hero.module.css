@@ -5,7 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: #efae02 solid;
-  position: relative; /* Add this to make absolute positioning work relative to .container */
+  position: relative; 
 }
 
 .darkContainer {
@@ -61,9 +61,9 @@
 .imageBottom {
   position: absolute;
   width: 380px;
-  bottom: 0; /* Aligns to the bottom */
-  left: 50%; /* Centers horizontally */
-  transform: translateX(-50%); /* Ensures perfect centering */
+  bottom: 0; 
+  left: 50%;
+  transform: translateX(-50%); 
 }
 
 @media (min-width: 0px) and (max-width: 500px) {

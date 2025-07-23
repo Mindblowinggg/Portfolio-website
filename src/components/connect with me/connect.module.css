@@ -3,21 +3,21 @@
 .connectContainer {
   padding:  20px;
   text-align: center;
-  /* Background color set by lightContainer/darkContainer */
+  
 }
 
 .lightContainer {
-  background-color: #f0f2f5; /* Light background for the section */
-  color: #333; /* Dark text */
+  background-color: #f0f2f5; 
+  color: #333; 
 }
 
 .darkContainer {
-  background-color: #1a1a1a; /* Dark background for the section */
-  color: #e0e0e0; /* Light text */
+  background-color: #1a1a1a; 
+  color: #e0e0e0; 
 }
 
 .heading {
-  color: gold; /* Gold color for the main heading */
+  color: gold; 
   font-size: 50px;
   font-family: "Michroma", sans-serif;
   font-weight: 900;
@@ -26,67 +26,71 @@
 
 .socialLinksGrid {
   display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  gap: 25px; /* Space between cards */
-  flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+  justify-content: center; 
+  gap: 25px; 
+  flex-wrap: wrap;  
   padding: 20px;
 }
 
 .socialCard {
   display: flex;
-  flex-direction: column; /* Icon and text stacked vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  text-decoration: none; /* Remove underline from links */
-  border-radius: 15px; /* Rounded corners for the card */
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  text-decoration: none; 
+  border-radius: 15px; 
   padding: 25px 20px;
-  width: 100px; /* Fixed width for each card */
-  height: 100px; /* Fixed height for consistency */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Light theme shadow */
+  width: 100px; 
+  height: 100px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  cursor: pointer; /* Indicate it's clickable */
-  border: 1px solid transparent; /* Placeholder for border on hover */
+  cursor: pointer; 
+  border: 1px solid transparent; 
 }
 
 .lightCard {
-  background-color: #ffffff; /* White background for card */
-  color: #444; /* Dark text */
+  background-color: #ffffff; 
+  color: #444; 
 }
 
 .darkCard {
-  background-color: #2a2a2a; /* Darker background for card */
-  color: #f0f0f0; /* Lighter text */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Darker shadow */
+  background-color: #2a2a2a; 
+  color: #f0f0f0; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
 }
 
 
 
 
 .socialIconWrapper {
-  margin-bottom: 15px; /* Space between icon and text */
+  margin-bottom: 15px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px; /* Fixed size for icon wrapper */
+  width: 60px; 
   height: 60px;
-  background-color: #eee; /* Light background for icon circle */
-  border-radius: 50%; /* Circular shape */
+  background-color: #eee; 
+  border-radius: 50%; 
   transition: background-color 0.3s ease;
 }
 
 .darkCard .socialIconWrapper {
-  background-color: #444; /* Darker background for icon circle in dark mode */
+  background-color: #444; 
 }
 
 
 .socialIcon {
-  font-size: 2.5em; /* Size of the icon */
-  color: #ffffff; /* Default icon color */
+  font-size: 2.5em; 
+  color: #ffffff; 
   transition: color 0.3s ease;
 }
 
 .darkCard .socialIcon {
-  color: #f0f0f0; /* Lighter icon color in dark mode */
+  color: #f0f0f0; 
+}
+
+.lightCard .socialIcon {
+  color: #000000; 
 }
 
 
@@ -94,14 +98,14 @@
   font-size: 1.1em;
   font-weight: 600;
   text-align: center;
-  /* Color is inherited from .socialCard */
+  
 }
 
 
 @media (max-width: 600px) {
   .socialCard {
-    width: 100%; /* Full width on very small screens to stack vertically */
-    max-width: 180px; /* Prevent cards from getting too wide if grid isn't used */
+    width: 100%; 
+    max-width: 180px;
   }
 
   .headinglight{
