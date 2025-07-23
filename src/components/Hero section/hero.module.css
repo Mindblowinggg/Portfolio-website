@@ -16,14 +16,21 @@
   background-color: #ffffff;
   border-bottom: #a27b5c solid;
 }
-
 .headingDark {
-  color: white;
-}
+    font-size: 50px;
+    width:max-content;
+    text-align: center;
+    color: white;
+  }
 
-.headingLight {
-  color: #333333;
-}
+  .headingLight {
+    font-size: 50px;
+    width:max-content;
+    text-align: center;
+      color: #333333;
+  }
+
+
 
 .spanlight {
   color: rgb(0, 0, 0);
@@ -37,6 +44,7 @@
 .ptagdark {
   color: white;
 }
+
 
 .resumeBtnDark {
   color: white;
@@ -57,21 +65,34 @@
   transform: translateX(-50%); /* Ensures perfect centering */
 }
 
-@media (min-width: 0px) and (max-width: 400px) {
+@media (min-width: 0px) and (max-width: 500px) {
+
+ .ptagdark,.ptaglight{
+  width: max-content;
+  font-size: 20px;
+ }
+
+
   .headingDark {
     font-size: 25px;
-    width: 300px;
+    width:max-content;
     text-align: center;
   }
 
   .headingLight {
     font-size: 25px;
-    width: 300px;
+    width:max-content;
     text-align: center;
+  }
+  .container{
+
+    height: 500px;
   }
 }
 
-@media (min-width: 400px) and (max-width: 800px) {
+@media (min-width: 500px) and (max-width: 800px) {
+
+
   .headingDark {
     font-size: 40px;
     width: 400px;
@@ -91,4 +112,32 @@
     width: 800px;
     text-align: center;
   }
+  
+
 }
+
+@media (min-width:500px) and (max-width:600px)  {
+
+  .container{
+    height: 650px;
+  }
+  
+}
+
+
+@media(min-width:600px) and (max-width:700px) {
+
+  .container{
+    height: 640px;
+  }
+  
+}
+@media(min-width:700px){
+
+  .container{
+    height: 740px;
+  }
+  
+}
+
+

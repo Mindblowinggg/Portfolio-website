@@ -11,7 +11,7 @@ const Hero = ({ currentTheme }) => {
           : Herostyles.darkContainer
       }`}
     >
-      <div className=" justify-center flex flex-col items-center absolute top-[15%] left-[50%] -translate-x-[50%]">
+      <div className=" justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%]">
         <h1
           className={`text-6xl ${
             currentTheme === "light"
@@ -21,7 +21,7 @@ const Hero = ({ currentTheme }) => {
         >
           Hello! I'm
           <span
-            className={`text-[#efae02] ml-3  ${
+            className={`text-[#efae02] ml-3 ${
               currentTheme === "light"
                 ? Herostyles.spanlight
                 : Herostyles.spandark
@@ -41,7 +41,7 @@ const Hero = ({ currentTheme }) => {
         </p>
         <a href="/RESUME.pdf" download="MyResume.pdf">
           <button
-            className={`px-10  flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400   transform transition-transform duration-300 hover:scale-105 ${
+            className={`px-10 flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400  transform transition-transform duration-300 hover:scale-105 ${
               currentTheme === "light"
                 ? Herostyles.resumeBtnLight
                 : Herostyles.resumeBtnDark
