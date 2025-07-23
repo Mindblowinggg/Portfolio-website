@@ -81,7 +81,7 @@
 
 .socialIcon {
   font-size: 2.5em; /* Size of the icon */
-  color: #333; /* Default icon color */
+  color: #ffffff; /* Default icon color */
   transition: color 0.3s ease;
 }
 
@@ -89,9 +89,6 @@
   color: #f0f0f0; /* Lighter icon color in dark mode */
 }
 
-.socialCard:hover .socialIcon {
-  color: #1a1a1a; /* Dark text for icon on hover (to contrast with gold background) */
-}
 
 .socialName {
   font-size: 1.1em;
@@ -101,7 +98,7 @@
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .socialCard {
     width: 100%; /* Full width on very small screens to stack vertically */
     max-width: 180px; /* Prevent cards from getting too wide if grid isn't used */
@@ -116,4 +113,12 @@
     font-size: 30px;
     color: gold;
   }
+}
+
+@media (min-width:600px) and (max-width:1000px) {
+
+  .headingdark{
+    font-size: 50px;
+  }
+  
 }

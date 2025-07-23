@@ -99,14 +99,14 @@
 
 
 
-@media (min-width:0px) and (max-width:400px) {
+@media (min-width:0px) and (max-width:600px) {
 
   .headinglight{
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
   }
    .headingdark{
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
   }
   .titledark{
@@ -115,6 +115,16 @@
 
   .titlelight{
     font-size: 30px;
+  }
+  
+}
+
+
+@media (min-width:1000px) {
+
+  .skillsList{
+    gap: 100px;
+    font-size: 20px;
   }
   
 }

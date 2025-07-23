@@ -42,7 +42,7 @@ const Skills = ({ currentTheme }) => {
       </div>
 
       {/* Technologies Section */}
-      <div className={styles.skillsGroup}>
+      <div className={`${styles.skillsGroup}`}>
         <h3
           className={`${styles.groupHeading} ${
             currentTheme === "light" ? styles.headinglight : styles.headingdark
@@ -50,7 +50,7 @@ const Skills = ({ currentTheme }) => {
         >
           Technologies I Use
         </h3>
-        <div className={styles.skillsList}>
+        <div className={`${styles.skillsList} `}>
           <div className="flex justify-center items-center gap-2">
             <FaHtml5 />
             <p>HTML5</p>

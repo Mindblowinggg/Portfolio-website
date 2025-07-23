@@ -20,13 +20,8 @@ const AboutMe = ({ currentTheme }) => {
           <p>Project Completed</p>
         </div>
       </div>
-      <p className={styles.description}>
-        A passionate Front End Developer with a Master's in Computer Application
-        and over 3.9 years of experience in crafting captivating digital
-        experiences. My expertise lies in leveraging cutting-edge technologies
-        such as ReactJS, NextJS, Apollo GraphQL, Redux, React Query, and various
-        UI frameworks including Material UI, NextUI, SCSS, Tailwind CSS, Chakra
-        UI, and Bootstrap.
+      <p className={`${styles.description} lg:text-xl` }>
+       Passionate front-end developer with a strong foundation in HTML, CSS, JSX, and React. I build intuitive and responsive web applications through self-initiated projects
       </p>
 
       <div className={styles.hobbySection}>

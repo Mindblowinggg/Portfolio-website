@@ -23,6 +23,7 @@
 
 .headinglight {
   color: rgb(0, 0, 0);
+  font-weight: 900;
   margin-bottom: 20px;
   font-size: 50px;
   font-family: "Michroma", sans-serif;
@@ -30,6 +31,7 @@
 
 .headingdark {
   color: gold;
+  font-weight: 900;
   margin-bottom: 20px;
   font-size: 50px;
   font-family: "Michroma", sans-serif;
@@ -54,7 +56,7 @@
 .hobbyTextlight {
   color: rgb(0, 0, 0);
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 30px;
   font-family: "Michroma", sans-serif;
   font-weight: 800;
 }
@@ -62,7 +64,7 @@
 .hobbyTextdark {
   color: gold;
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 30px;
   font-family: "Michroma", sans-serif;
   font-weight: 800;
 }
@@ -126,7 +128,7 @@
 }
 
 
-@media (min-width:0px) and (max-width:400px) {
+@media (min-width:0px) and (max-width:600px) {
   .headinglight {
     font-size: 30px;
     font-weight:900;
