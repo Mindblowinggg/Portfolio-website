@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  height: 100vh;
+  height: 680px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,12 +60,17 @@
 
 .imageBottom {
   position: absolute;
+  width: 380px;
   bottom: 0; /* Aligns to the bottom */
   left: 50%; /* Centers horizontally */
   transform: translateX(-50%); /* Ensures perfect centering */
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
+
+  .imageBottom{
+    width: 200px;
+  }
 
  .ptagdark,.ptaglight{
   width: max-content;
@@ -92,7 +97,9 @@
 
 @media (min-width: 500px) and (max-width: 800px) {
 
-
+.imageBottom{
+  width: 300px;
+}
   .headingDark {
     font-size: 40px;
     width: 400px;
@@ -116,28 +123,5 @@
 
 }
 
-@media (min-width:500px) and (max-width:600px)  {
-
-  .container{
-    height: 650px;
-  }
-  
-}
-
-
-@media(min-width:600px) and (max-width:700px) {
-
-  .container{
-    height: 640px;
-  }
-  
-}
-@media(min-width:700px){
-
-  .container{
-    height: 740px;
-  }
-  
-}
 
 
