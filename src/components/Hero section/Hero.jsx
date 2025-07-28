@@ -1,22 +1,29 @@
-import React, { useState, useEffect } from "react"; // Import useEffect and useState
+import React, { useState, useEffect } from "react";
 import Herostyles from "./hero.module.css";
 import { FiDownloadCloud } from "react-icons/fi";
 
 const Hero = ({ currentTheme }) => {
-  const fullOccupationText = "A Frontend Developer"; 
-  const [typedOccupationText, setTypedOccupationText] = useState('');
-  const [occupationTextIndex, setOccupationTextIndex] = useState(0); 
+  const fulltext = "A FrontEnd Developer";
+
+  const [typedtext, settypedtext] = useState("A");
+  const [currentIndex, setCurrentIndex] = useState(1); // <--- इसे जोड़ा है
 
   useEffect(() => {
-    if (occupationTextIndex < fullOccupationText.length) {
-      const typingTimeout = setTimeout(() => {
-        setTypedOccupationText(prevTypedText => prevTypedText + fullOccupationText.charAt(occupationTextIndex));
-        setOccupationTextIndex(prevIndex => prevIndex + 1);
-      }, 90); // Adjust typing speed here 
 
-      return () => clearTimeout(typingTimeout);
+    if (currentIndex < fulltext.length) {
+      // <--- currentIndex का उपयोग करें
+      const typingTimeout = setTimeout(() => {
+        settypedtext(
+          (prevTypedText) => prevTypedText + fulltext.charAt(currentIndex)
+        ); // <--- currentIndex का उपयोग करें
+        setCurrentIndex((prevIndex) => prevIndex + 1); // <--- currentIndex को बढ़ाएं
+      }, 90); // टाइपिंग की गति
+
+      return () => clearTimeout(typingTimeout); // क्लीनअप
     }
-  }, [occupationTextIndex, fullOccupationText]); 
+  }, [currentIndex, fulltext]);
+
+
 
   return (
     <div
@@ -52,7 +59,7 @@ const Hero = ({ currentTheme }) => {
               : Herostyles.ptagdark
           }`}
         >
-          {typedOccupationText} {/* Display the typed text here */}
+          {typedtext} {/* यहाँ typedtext ही डिस्प्ले करें */}
         </p>
         <a href="/RESUME.pdf" download="MyResume.pdf">
           <button
@@ -67,9 +74,9 @@ const Hero = ({ currentTheme }) => {
           </button>
         </a>
       </div>
-      
+
       <div className={Herostyles.imageBottom}>
-        <img src="/pfp.png" alt="Profile" /> {/* Added alt text for accessibility */}
+        <img src="/pfp.png" alt="Profile" />
       </div>
     </div>
   );
