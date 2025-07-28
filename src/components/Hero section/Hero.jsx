@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react"; // Import useEffect and useState
 import Herostyles from "./hero.module.css";
 import { FiDownloadCloud } from "react-icons/fi";
 
 const Hero = ({ currentTheme }) => {
+  const fullOccupationText = "A Frontend Developer"; 
+  const [typedOccupationText, setTypedOccupationText] = useState('');
+  const [occupationTextIndex, setOccupationTextIndex] = useState(0); 
+
+  useEffect(() => {
+    if (occupationTextIndex < fullOccupationText.length) {
+      const typingTimeout = setTimeout(() => {
+        setTypedOccupationText(prevTypedText => prevTypedText + fullOccupationText.charAt(occupationTextIndex));
+        setOccupationTextIndex(prevIndex => prevIndex + 1);
+      }, 90); // Adjust typing speed here 
+
+      return () => clearTimeout(typingTimeout);
+    }
+  }, [occupationTextIndex, fullOccupationText]); 
+
   return (
     <div
       className={`${Herostyles.container} ${
@@ -11,7 +26,7 @@ const Hero = ({ currentTheme }) => {
           : Herostyles.darkContainer
       }`}
     >
-      <div className=" justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%]">
+      <div className="justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%]">
         <h1
           className={`text-6xl ${
             currentTheme === "light"
@@ -37,11 +52,11 @@ const Hero = ({ currentTheme }) => {
               : Herostyles.ptagdark
           }`}
         >
-          A Frontend Developer
+          {typedOccupationText} {/* Display the typed text here */}
         </p>
         <a href="/RESUME.pdf" download="MyResume.pdf">
           <button
-            className={`px-10 flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400  transform transition-transform duration-300 hover:scale-105 ${
+            className={`px-10 flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400 transform transition-transform duration-300 hover:scale-105 ${
               currentTheme === "light"
                 ? Herostyles.resumeBtnLight
                 : Herostyles.resumeBtnDark
@@ -52,10 +67,9 @@ const Hero = ({ currentTheme }) => {
           </button>
         </a>
       </div>
-
       
       <div className={Herostyles.imageBottom}>
-        <img src="/pfp.png" />
+        <img src="/pfp.png" alt="Profile" /> {/* Added alt text for accessibility */}
       </div>
     </div>
   );
