@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Herostyles from "./hero.module.css";
 import { FiDownloadCloud } from "react-icons/fi";
-import Reacticon from "./reacticon";
+import Reacticon from "./icons/reacticon";
+import Htmlicon from "./icons/htmlicon";
+
 
 const Hero = ({ currentTheme }) => {
   const fulltext = "A FrontEnd Developer";
@@ -97,8 +99,10 @@ const Hero = ({ currentTheme }) => {
         </a>
       </div>
 
-      {/*----------------react icon------------------------ */}
+      {/*----------------icons------------------------ */}
       <Reacticon />
+      <Htmlicon/>
+      
 
       <div className={Herostyles.imageBottom}>
         <img src="/pfp.png" alt="Profile" />
