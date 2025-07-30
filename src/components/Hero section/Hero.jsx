@@ -5,44 +5,11 @@ import Reacticon from "./icons/reacticon";
 import Htmlicon from "./icons/htmlicon";
 import Jsicon from "./icons/jsicon";
 import Cssicon from "./icons/cssicon";
+import Typingeffect from "./typingeffect";
 
 
 const Hero = ({ currentTheme }) => {
-  const fulltext = "A FrontEnd Developer";
-
-  const [typedtext, settypedtext] = useState("A");
-
-  const [currentIndex, setCurrentIndex] = useState(1);
-
-  const [showCursor, setShowCursor] = useState(true);
-
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500);
-
-    return () => clearInterval(cursorInterval);
-  }, []);
-  useEffect(() => {
-    if (currentIndex < fulltext.length) {
-      const typingTimeout = setTimeout(() => {
-        settypedtext(
-          (prevTypedText) => prevTypedText + fulltext.charAt(currentIndex)
-        );
-
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, 90);
-      return () => clearTimeout(typingTimeout);
-    } else {
-      setShowCursor(true);
-      const resetTimeout = setTimeout(() => {
-        settypedtext("A");
-        setCurrentIndex(1);
-        setShowCursor(true);
-      }, 4000);
-      return () => clearTimeout(resetTimeout);
-    }
-  }, [currentIndex, fulltext]);
+  
 
   return (
     <div
@@ -71,22 +38,8 @@ const Hero = ({ currentTheme }) => {
             Aman Kahar
           </span>
         </h1>
-        <p
-          className={`text-white text-3xl mt-5 ${
-            currentTheme === "light"
-              ? Herostyles.ptaglight
-              : Herostyles.ptagdark
-          }`}
-        >
-          {typedtext}
-
-          <span
-            className={Herostyles.cursor}
-            style={{ opacity: showCursor ? 1 : 0 }}
-          >
-            |
-          </span>
-        </p>
+        <Typingeffect/>
+        
         <a href="/RESUME.pdf" download="MyResume.pdf">
           <button
             className={`px-10 flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400 transform transition-transform duration-300 hover:scale-105 ${
