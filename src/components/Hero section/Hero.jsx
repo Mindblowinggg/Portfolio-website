@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import Herostyles from "./hero.module.css";
 import { FiDownloadCloud } from "react-icons/fi";
 import Reacticon from "./icons/reacticon";
@@ -7,10 +8,7 @@ import Jsicon from "./icons/jsicon";
 import Cssicon from "./icons/cssicon";
 import Typingeffect from "./typingeffect";
 
-
 const Hero = ({ currentTheme }) => {
-  
-
   return (
     <div
       className={`${Herostyles.container} ${
@@ -20,15 +18,25 @@ const Hero = ({ currentTheme }) => {
       }`}
     >
       <div className="justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%]">
-        <h1
-          className={`text-6xl flex  ${
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className={`text-6xl flex ${
             currentTheme === "light"
               ? Herostyles.headingLight
               : Herostyles.headingDark
           }`}
         >
           Hello! I'm
-          <span
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.7, 
+              ease: "easeOut",
+              delay: 0.5,
+            }}
             className={`text-[#efae02] ml-3 ${
               currentTheme === "light"
                 ? Herostyles.spanlight
@@ -36,10 +44,11 @@ const Hero = ({ currentTheme }) => {
             } `}
           >
             Aman Kahar
-          </span>
-        </h1>
-        <Typingeffect/>
-        
+          </motion.span>
+        </motion.h1>
+
+        <Typingeffect />
+
         <a href="/RESUME.pdf" download="MyResume.pdf">
           <button
             className={`px-10 flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400 transform transition-transform duration-300 hover:scale-105 ${
@@ -56,10 +65,9 @@ const Hero = ({ currentTheme }) => {
 
       {/*----------------icons------------------------ */}
       <Reacticon />
-      <Htmlicon/>
-      <Jsicon/>
-      <Cssicon/>
-      
+      <Htmlicon />
+      <Jsicon />
+      <Cssicon />
 
       <div className={Herostyles.imageBottom}>
         <img src="/pfp.png" alt="Profile" />
