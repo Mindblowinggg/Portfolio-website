@@ -63,13 +63,13 @@
   width: 380px;
   bottom: 0; 
   left: 50%;
-  transform: translateX(-50%); 
+
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
 
   .imageBottom{
-    width: 200px;
+    width: 120px;
   }
 
  .ptagdark,.ptaglight{

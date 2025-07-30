@@ -7,6 +7,7 @@ import Htmlicon from "./icons/htmlicon";
 import Jsicon from "./icons/jsicon";
 import Cssicon from "./icons/cssicon";
 import Typingeffect from "./typingeffect";
+import PFP from "/pfp.svg";
 
 const Hero = ({ currentTheme }) => {
   return (
@@ -33,7 +34,7 @@ const Hero = ({ currentTheme }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.7, 
+              duration: 0.7,
               ease: "easeOut",
               delay: 0.5,
             }}
@@ -69,9 +70,18 @@ const Hero = ({ currentTheme }) => {
       <Jsicon />
       <Cssicon />
 
-      <div className={Herostyles.imageBottom}>
-        <img src="/pfp.png" alt="Profile" />
-      </div>
+      <motion.div
+        className={Herostyles.imageBottom}
+        initial={{ opacity: 0, y: 50, x: "-50%" }} 
+        animate={{ opacity: 1, y: 0, x: "-50%" }} 
+        transition={{
+          duration: 1.2,
+          ease: "easeOut",
+         
+        }}
+      >
+        <img src={PFP} alt="Profile" />
+      </motion.div>
     </div>
   );
 };
