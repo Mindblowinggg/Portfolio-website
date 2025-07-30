@@ -24,8 +24,8 @@
   .js-icon-container {
     position:absolute; /* Already defined, but good to ensure */
     bottom: 10%;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     right: 10%; /* Adjust for very small screens */
     left: auto; 
     z-index: 1000;
