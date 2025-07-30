@@ -3,6 +3,8 @@ import Herostyles from "./hero.module.css";
 import { FiDownloadCloud } from "react-icons/fi";
 import Reacticon from "./icons/reacticon";
 import Htmlicon from "./icons/htmlicon";
+import Jsicon from "./icons/jsicon";
+import Cssicon from "./icons/cssicon";
 
 
 const Hero = ({ currentTheme }) => {
@@ -102,6 +104,8 @@ const Hero = ({ currentTheme }) => {
       {/*----------------icons------------------------ */}
       <Reacticon />
       <Htmlicon/>
+      <Jsicon/>
+      <Cssicon/>
       
 
       <div className={Herostyles.imageBottom}>

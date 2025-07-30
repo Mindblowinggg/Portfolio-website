@@ -1,6 +1,6 @@
 
 
-.react-icon-container {
+.css-icon-container {
   position: absolute;
   bottom: 25%;
   left: 20%;
@@ -13,24 +13,25 @@
 }
 
 @media (max-width: 768px) {
-  .react-icon-container {
+  .css-icon-container {
     bottom: 15%;
     left: 10%;
   }
 
-  .react-icon-container svg {
+  .css-icon-container svg {
     font-size: 50px;
   }
 }
 
 @media (max-width: 480px) {
-  .react-icon-container {
+  .css-icon-container {
     bottom: 20%;
-    left: 20%; 
+    right: 20%;
+    left: auto;
     z-index: 1000;
   }
 
-  .react-icon-container svg {
-    font-size: px;
+  .css-icon-container svg {
+    font-size: 45px;
   }
 }

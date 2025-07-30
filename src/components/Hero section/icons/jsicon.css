@@ -1,0 +1,33 @@
+.js-icon-container {
+  position: absolute;
+  bottom: 15%;
+  left: 20%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .js-icon-container {
+    bottom: 15%;
+    left: 10%;
+  }
+
+  .js-icon-container svg {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .js-icon-container {
+    position:absolute; /* Already defined, but good to ensure */
+    bottom: 10%;
+    height: 40px;
+    width: 40px;
+    right: 10%; /* Adjust for very small screens */
+    left: auto; 
+    z-index: 1000;
+  }
+}
