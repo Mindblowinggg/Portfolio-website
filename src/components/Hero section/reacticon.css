@@ -25,6 +25,7 @@
   .react-icon-container {
     bottom: 20%;
     left: 15%; 
+    z-index: 1000;
   }
 
   .react-icon-container svg {
