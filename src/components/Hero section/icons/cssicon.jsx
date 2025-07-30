@@ -13,7 +13,7 @@ const Cssicon = () => {
     onClick={handleCssIconClick}
        className="css-icon-container   "
       animate={{
-        scale: [1,1.1,1], 
+        scale: [1,1.15,1], 
         filter: [
           "drop-shadow(0px 0px 0px rgba(255, 109, 0, 0.7))", 
           "drop-shadow(0px 0px 10px rgba(255, 109, 0, 0.9))", 

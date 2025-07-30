@@ -14,7 +14,7 @@ const Jsicon = () => {
       onClick={handleJSIconClick}
       className="js-icon-container "
       animate={{
-        scale: [1], 
+       scale: [1,1.15,1], 
         filter: [
           "drop-shadow(0px 0px 5px rgba(255, 250, 205, 0.7))", // हल्का पीला ग्लो
           "drop-shadow(0px 0px 10px rgba(255, 250, 205, 0.9))", // मध्यम पीला ग्लो
