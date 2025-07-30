@@ -28,6 +28,6 @@
     width: 30px;
     right: 10%; /* Adjust for very small screens */
     left: auto; 
-    z-index: 1000;
+    z-index: 900;
   }
 }

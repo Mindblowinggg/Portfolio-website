@@ -4,7 +4,7 @@
   position: absolute;
   bottom: 25%;
   left: 20%;
-  z-index: 1000;
+  z-index: 900;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
     bottom: 20%;
     right: 20%;
     left: auto;
-    z-index: 1000;
+    z-index: 900;
   }
 
   .css-icon-container svg {

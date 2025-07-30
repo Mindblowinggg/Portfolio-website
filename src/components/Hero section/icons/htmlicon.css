@@ -27,7 +27,7 @@
   .html-icon-container {
     bottom: 10%;
     left: 10%; 
-    z-index: 1000;
+    z-index: 900;
   }
 
   .html-icon-container svg {
