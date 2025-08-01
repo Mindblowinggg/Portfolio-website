@@ -1,7 +1,9 @@
 .js-icon-container {
   position: absolute;
-  bottom: 15%;
-  left: 20%;
+  bottom: 10%;
+  right: 10%;
+  height: 70px;
+  width: 70px;
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -22,12 +24,14 @@
 
 @media (max-width: 480px) {
   .js-icon-container {
-    position:absolute; /* Already defined, but good to ensure */
+    position: absolute;
+    /* Already defined, but good to ensure */
     bottom: 10%;
     height: 30px;
     width: 30px;
-    right: 10%; /* Adjust for very small screens */
-    left: auto; 
+    right: 10%;
+    /* Adjust for very small screens */
+    left: auto;
     z-index: 900;
   }
 }

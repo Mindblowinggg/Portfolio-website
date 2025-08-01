@@ -16,28 +16,18 @@ const Htmlicon = () => {
       animate={{
         opacity: 1, // Animate opacity to 1 and keep it there
         scale: [1, 1.2, 1], // Only scale animates repeatedly
-        filter: [
-          "drop-shadow(0px 0px 0px rgba(255, 109, 0, 0.7))",
-          "drop-shadow(0px 0px 20px rgba(255, 109, 0, 0.9))",
-          "drop-shadow(0px 0px 5px rgba(255, 109, 0, 0.7))"
-        ],
+        
       }}
       transition={{
         opacity: {delay:0.8, duration: 1, ease: "easeInOut" }, // Opacity animation plays once
         scale: {
-          delay: 1, // Start scale animation after opacity finishes
+          
           duration: 2,
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "mirror"
         },
-        filter: {
-          delay: 1, // Start filter animation after opacity finishes
-          duration: 2,
-          ease: "easeInOut",
-          repeat: Infinity,
-          repeatType: "mirror"
-        },
+       
       }}
     >
       <ImHtmlFive color="#FF6D00" />

@@ -3,7 +3,7 @@
 .css-icon-container {
   position: absolute;
   bottom: 25%;
-  left: 20%;
+  right: 25%;
   z-index: 900;
   display: flex;
   justify-content: center;

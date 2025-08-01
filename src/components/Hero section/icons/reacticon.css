@@ -3,7 +3,7 @@
 .react-icon-container {
   position: absolute;
   bottom: 25%;
-  left: 20%;
+  left: 25%;
   z-index: 1000;
   display: flex;
   justify-content: center;
