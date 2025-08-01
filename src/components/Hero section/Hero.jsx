@@ -7,7 +7,8 @@ import Htmlicon from "./icons/htmlicon";
 import Jsicon from "./icons/jsicon";
 import Cssicon from "./icons/cssicon";
 import Typingeffect from "./typingeffect";
-import PFP from "/pfp.svg";
+import PFPdark from "/pfp.svg";
+import PFPlight from "/pfplight.svg";
 
 const Hero = ({ currentTheme }) => {
   return (
@@ -48,7 +49,7 @@ const Hero = ({ currentTheme }) => {
           </motion.span>
         </motion.h1>
 
-        <Typingeffect />
+        <Typingeffect currentTheme={currentTheme} />
 
         <a href="/RESUME.pdf" download="MyResume.pdf">
           <button
@@ -80,7 +81,7 @@ const Hero = ({ currentTheme }) => {
          
         }}
       >
-        <img src={PFP} alt="Profile" />
+        <img src={currentTheme === "light" ? PFPlight : PFPdark} alt="ProfilePic" />
       </motion.div>
     </div>
   );

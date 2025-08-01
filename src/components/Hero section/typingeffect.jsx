@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Herostyles from "./hero.module.css";
 
-const Typingeffect = ({ currentTheme }) => { // Destructure currentTheme
+const Typingeffect = ({ currentTheme }) => { 
   const fulltext = "A FrontEnd Developer";
-
   const [typedtext, settypedtext] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
@@ -18,14 +17,14 @@ const Typingeffect = ({ currentTheme }) => { // Destructure currentTheme
     return () => clearInterval(cursorInterval);
   }, []);
 
-  // --- New useEffect for the initial delay ---
+  
   useEffect(() => {
     const initialDelayTimeout = setTimeout(() => {
-      setStartTyping(true); // Set to true after 1 second
-    }, 1300); // 1000 milliseconds = 1 second
+      setStartTyping(true); 
+    }, 1300); 
 
-    return () => clearTimeout(initialDelayTimeout); // Clean up timeout
-  }, []); // Run only once on component mount
+    return () => clearTimeout(initialDelayTimeout); 
+  }, []); 
 
   // Typing logic
   useEffect(() => {
@@ -48,11 +47,12 @@ const Typingeffect = ({ currentTheme }) => { // Destructure currentTheme
   return (
     <div>
       <p
-        className={`text-white text-3xl mt-5 ${
+        className={`text-3xl mt-5 ${
           currentTheme === "light" ? Herostyles.ptaglight : Herostyles.ptagdark
         }`}
       >
-        {typedtext}
+        {typedtext }
+        
         <span
           className={Herostyles.cursor}
           style={{ opacity: showCursor ? 1 : 0 }}

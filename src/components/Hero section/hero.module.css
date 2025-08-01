@@ -30,19 +30,17 @@
       color: #333333;
   }
 
-
-
 .spanlight {
   color: rgb(0, 0, 0);
 }
 
 .ptaglight {
-  color: black;
-  font-weight: 500;
+  color: rgb(0, 0, 0);
+
 }
 
 .ptagdark {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -53,7 +51,8 @@
 }
 
 .resumeBtnLight {
-  color: #333333;
+  color: #000000;
+  font-weight: 600;
   border-color: #000000;
   background-color: #f0f0f0;
 }
