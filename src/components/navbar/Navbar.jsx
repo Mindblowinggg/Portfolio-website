@@ -25,8 +25,8 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
 
   return (
     <motion.nav
-      initial={{ opacity: 0, y: -100 ,x: "-50%" }}
-      animate={{ opacity: 1, y: 0,x: "-50%" }}
+      initial={{ opacity: 0, y: -100, x: "-50%" }}
+      animate={{ opacity: 1, y: 0, x: "-50%" }}
       transition={{ duration: 2.2, type: "spring" }}
       className={`${Styles.navbar} ${
         currentTheme === "light" ? Styles.lightNavbar : Styles.darkNavbar
