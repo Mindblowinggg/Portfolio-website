@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Styles from "./Navbar.module.css";
 import logo from "/A.png";
 import DarkModeToggle from "./DarkModeBtn";
@@ -23,7 +24,10 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
   };
 
   return (
-    <nav
+    <motion.nav
+      initial={{ opacity: 0, y: -100 ,x: "-50%" }}
+      animate={{ opacity: 1, y: 0,x: "-50%" }}
+      transition={{ duration: 2.2, type: "spring" }}
       className={`${Styles.navbar} ${
         currentTheme === "light" ? Styles.lightNavbar : Styles.darkNavbar
       } px-1 rounded-full`}
@@ -122,7 +126,11 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
                     : Styles.drop1divdark
                 }`}
               >
-                <a href="https://example-eight-fawn.vercel.app/" target="blank" onClick={closeAllMenus}>
+                <a
+                  href="https://example-eight-fawn.vercel.app/"
+                  target="blank"
+                  onClick={closeAllMenus}
+                >
                   project 1
                 </a>
               </div>
@@ -130,7 +138,7 @@ const Navbar = ({ currentTheme, onToggleTheme }) => {
           </div>
         )}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
