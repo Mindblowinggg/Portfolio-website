@@ -1,48 +1,64 @@
 import React, { useEffect, useState } from "react";
 import Herostyles from "./hero.module.css";
 
-const Typingeffect = ({ currentTheme }) => { 
-  const fulltext = "A FrontEnd Developer";
-  const [typedtext, settypedtext] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Typingeffect = ({ currentTheme }) => {
+  const [typedText, setTypedText] = useState("");
+  const [textIndex, setTextIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(90);
   const [showCursor, setShowCursor] = useState(true);
-  const [startTyping, setStartTyping] = useState(false); // New state to control start
 
-  // Cursor blinking effect
+  // कर्सर ब्लिंकिंग इफ़ेक्ट
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
     }, 500);
-
     return () => clearInterval(cursorInterval);
   }, []);
 
-  
+  // मुख्य टाइपिंग और डिलीटिंग लॉजिक
   useEffect(() => {
-    const initialDelayTimeout = setTimeout(() => {
-      setStartTyping(true); 
-    }, 1300); 
+    const texts = [
+      "A FrontEnd Developer",
+      "Building Imagination into Reality",
+      "A React Enthusiast",
+    ];
 
-    return () => clearTimeout(initialDelayTimeout); 
-  }, []); 
+    const handleTyping = () => {
+      const fullText = texts[textIndex];
+      if (!isDeleting) {
+        setTypedText(fullText.substring(0, typedText.length + 1));
+        setTypingSpeed(90);
+      } else {
+        setTypedText(fullText.substring(0, typedText.length - 1));
+        setTypingSpeed(60);
+      }
+    };
 
-  // Typing logic
-  useEffect(() => {
-    if (!startTyping) { // Don't start typing until startTyping is true
-      return;
+    if (!isDeleting && typedText === texts[textIndex]) {
+      setTypingSpeed(1500);
+      setIsDeleting(true);
+    } 
+    else if (isDeleting && typedText === "") {
+      if (textIndex === texts.length - 1) {
+        // आखिरी टेक्स्ट के बाद 3 सेकंड का लंबा पॉज़
+        setTypingSpeed(1000); 
+        setTimeout(() => {
+          setIsDeleting(false);
+          setTextIndex(0); // इंडेक्स को 0 पर वापस सेट करें
+        }, 1000);
+        return;
+      } else {
+        setIsDeleting(false);
+        setTextIndex((prevIndex) => (prevIndex + 1));
+        setTypingSpeed(500);
+      }
     }
 
-    if (currentIndex < fulltext.length) {
-      const typingTimeout = setTimeout(() => {
-        settypedtext((prevTypedText) => prevTypedText + fulltext.charAt(currentIndex));
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, 90);
-      return () => clearTimeout(typingTimeout);
-    } else {
-      setShowCursor(true);
-      
-    }
-  }, [currentIndex, fulltext, startTyping]); // Add startTyping to dependency array
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+    
+  }, [typedText, isDeleting, textIndex, typingSpeed]);
 
   return (
     <div>
@@ -51,8 +67,7 @@ const Typingeffect = ({ currentTheme }) => {
           currentTheme === "light" ? Herostyles.ptaglight : Herostyles.ptagdark
         }`}
       >
-        {typedtext }
-        
+        {typedText}
         <span
           className={Herostyles.cursor}
           style={{ opacity: showCursor ? 1 : 0 }}
