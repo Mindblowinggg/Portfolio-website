@@ -11,7 +11,6 @@ const containerVariants = {
   visible: {
     transition: {
       staggerChildren: 0.1,
-      // Each letter will animate with a delay
     },
   },
 };
@@ -23,10 +22,9 @@ const letterVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      damping: 9,
-      stiffness: 150,
-      repeat: Infinity,
-      repeatDelay: 3,
+      damping: 10,
+      stiffness: 200,
+     
     },
   },
 };
