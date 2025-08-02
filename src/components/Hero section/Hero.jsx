@@ -27,6 +27,9 @@ const Hero = ({ currentTheme }) => {
     setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videoUrls.length);
   };
 
+  const placeholderImageUrl =
+    "https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"; // यह आपका URL है
+
   return (
     <div
       className={`${Herostyles.container} ${
@@ -48,6 +51,7 @@ const Hero = ({ currentTheme }) => {
           muted
           onEnded={handleVideoEnd}
           loop={false}
+          poster={placeholderImageUrl} // यहाँ पर URL का उपयोग किया गया है
         >
           <source src={videoUrls[currentVideoIndex]} type="video/mp4" />
         </motion.video>
@@ -70,7 +74,11 @@ const Hero = ({ currentTheme }) => {
           }`}
         >
           <motion.div className={Herostyles.wave}>
-            <Lottie animationData={currentTheme==="light"? HelloanimationLight :HelloanimationDark} />
+            <Lottie
+              animationData={
+                currentTheme === "light" ? HelloanimationLight : HelloanimationDark
+              }
+            />
           </motion.div>
           Hello! I'm
           <motion.span
