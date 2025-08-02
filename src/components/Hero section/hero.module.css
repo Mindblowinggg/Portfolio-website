@@ -52,14 +52,18 @@
   font-size: 50px;
   width: max-content;
   text-align: center;
+   padding: 8px 5px;
   color: white;
+  background-color: rgba(0, 0, 0, 0.554);
 }
 
 .headingLight {
   font-size: 50px;
   width: max-content;
+  padding: 8px 5px;
   text-align: center;
   color: #000000;
+  background-color: rgba(0, 0, 0, 0.169);
 }
 
 .spanlight {
