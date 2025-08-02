@@ -10,10 +10,8 @@ import { GiDuration } from "react-icons/gi";
 const containerVariants = {
   visible: {
     transition: {
-      
       staggerChildren: 0.1,
-       // Each letter will animate with a delay
-      
+      // Each letter will animate with a delay
     },
   },
 };
@@ -28,7 +26,7 @@ const letterVariants = {
       damping: 9,
       stiffness: 150,
       repeat: Infinity,
-      repeatDelay: 3 
+      repeatDelay: 3,
     },
   },
 };
@@ -49,7 +47,7 @@ const AboutMe = ({ currentTheme }) => {
         }`}
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
         
       >
         {letters.map((letter, index) => (
@@ -74,7 +72,9 @@ const AboutMe = ({ currentTheme }) => {
       <div className={styles.hobbySection}>
         <h3
           className={` ${
-            currentTheme === "light" ? styles.hobbyTextlight : styles.hobbyTextdark
+            currentTheme === "light"
+              ? styles.hobbyTextlight
+              : styles.hobbyTextdark
           }`}
         >
           My Hobbies:
