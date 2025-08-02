@@ -59,7 +59,7 @@
 
 .imageBottom {
   position: absolute;
-  width: 230px;
+  width: 500px;
   bottom: 0; 
   left: 50%;
 
@@ -68,7 +68,7 @@
 @media (min-width: 0px) and (max-width: 500px) {
 
   .imageBottom{
-    width: 120px;
+    width: 240px;
   }
 
  .ptagdark,.ptaglight{

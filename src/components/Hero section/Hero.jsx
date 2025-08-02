@@ -7,8 +7,9 @@ import Htmlicon from "./icons/htmlicon";
 import Jsicon from "./icons/jsicon";
 import Cssicon from "./icons/cssicon";
 import Typingeffect from "./typingeffect";
-import PFPdark from "/pfp.svg";
-import PFPlight from "/pfplight.svg";
+import Lottie from "lottie-react";
+import PfpanimationLight from "./icons/man with laptop Light.json";
+import PfpanimationDark from "./icons/man with laptop Dark.json";
 
 const Hero = ({ currentTheme }) => {
   return (
@@ -19,6 +20,7 @@ const Hero = ({ currentTheme }) => {
           : Herostyles.darkContainer
       }`}
     >
+      {/* ----------- Text & Resume Section ------------- */}
       <div className="justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%]">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -49,8 +51,10 @@ const Hero = ({ currentTheme }) => {
           </motion.span>
         </motion.h1>
 
+        {/* Typing Effect Component */}
         <Typingeffect currentTheme={currentTheme} />
 
+        {/* Resume Button */}
         <a href="/RESUME.pdf" download="MyResume.pdf">
           <button
             className={`px-10 flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400 transform transition-transform duration-300 hover:scale-105 ${
@@ -65,23 +69,27 @@ const Hero = ({ currentTheme }) => {
         </a>
       </div>
 
-      {/*----------------icons------------------------ */}
+      {/* ---------------- Icons ----------------- */}
       <Reacticon />
       <Htmlicon />
       <Jsicon />
       <Cssicon />
 
+      {/* --------------- Lottie Animation -------------- */}
       <motion.div
         className={Herostyles.imageBottom}
-        initial={{ opacity: 0, y: 50, x: "-50%" }} 
-        animate={{ opacity: 1, y: 0, x: "-50%" }} 
+        initial={{ opacity: 0, y: 50, x: "-50%" }}
+        animate={{ opacity: 1, y: 0, x: "-50%" }}
         transition={{
           duration: 1.2,
           ease: "easeOut",
-         
         }}
       >
-        <img src={currentTheme === "light" ? PFPlight : PFPdark} alt="ProfilePic" />
+        <Lottie
+          animationData={
+            currentTheme === "light" ? PfpanimationLight : PfpanimationDark
+          }
+        />
       </motion.div>
     </div>
   );
