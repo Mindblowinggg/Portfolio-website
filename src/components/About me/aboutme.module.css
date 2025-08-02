@@ -27,6 +27,8 @@
   margin-bottom: 20px;
   font-size: 50px;
   font-family: "Michroma", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .headingdark {
@@ -35,6 +37,9 @@
   margin-bottom: 20px;
   font-size: 50px;
   font-family: "Michroma", sans-serif;
+  display: flex;
+  justify-content: center;
+  
 }
 
 
