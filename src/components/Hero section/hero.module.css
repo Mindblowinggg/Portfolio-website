@@ -6,45 +6,61 @@
   background-repeat: no-repeat;
   border-bottom: #efae02 solid;
   position: relative;
-   
+
 }
+
 .backgroundVideo {
   height: 100%;
   width: 100%;
   object-fit: cover;
   z-index: -2;
-  position: absolute; /* important */
+  position: absolute;
+  /* important */
   top: 0;
   left: 0;
 }
 
-.videoOverlay {
+.videoOverlayDark {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(14, 14, 14, 0.951); /* adjust darkness here */
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.651),
+      rgba(0, 0, 0, 1));
+  z-index: -1;
+}
+
+.videoOverlayLight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.527),
+      rgb(255, 255, 255));
   z-index: -1;
 }
 
 .lightContainer {
-  background-color: #ffffff;
   border-bottom: #a27b5c solid;
 }
-.headingDark {
-    font-size: 50px;
-    width:max-content;
-    text-align: center;
-    color: white;
-  }
 
-  .headingLight {
-    font-size: 50px;
-    width:max-content;
-    text-align: center;
-      color: #333333;
-  }
+.headingDark {
+  font-size: 50px;
+  width: max-content;
+  text-align: center;
+  color: white;
+}
+
+.headingLight {
+  font-size: 50px;
+  width: max-content;
+  text-align: center;
+  color: #000000;
+}
 
 .spanlight {
   color: rgb(0, 0, 0);
@@ -76,35 +92,39 @@
 .imageBottom {
   position: absolute;
   width: 500px;
-  bottom: 0; 
+  bottom: 0;
   left: 50%;
 
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
 
-  .imageBottom{
+  .imageBottom {
     width: 240px;
   }
 
- .ptagdark,.ptaglight{
-  width: max-content;
-  font-size: 20px;
- }
+  .ptagdark,
+  .ptaglight {
+    width: max-content;
+    font-size: 20px;
+    font-weight: 600;
+  }
 
 
   .headingDark {
     font-size: 25px;
-    width:max-content;
+    width: max-content;
     text-align: center;
   }
 
   .headingLight {
     font-size: 25px;
-    width:max-content;
+    font-weight: 500;
+    width: max-content;
     text-align: center;
   }
-  .container{
+
+  .container {
 
     height: 500px;
   }
@@ -112,9 +132,10 @@
 
 @media (min-width: 500px) and (max-width: 800px) {
 
-.imageBottom{
-  width: 300px;
-}
+  .imageBottom {
+    width: 300px;
+  }
+
   .headingDark {
     font-size: 40px;
     width: 400px;
@@ -129,12 +150,10 @@
 }
 
 @media (min-width: 800px) and (max-width: 1000px) {
+
   .headingDark,
   .headingLight {
     width: 800px;
     text-align: center;
   }
 }
-
-
-

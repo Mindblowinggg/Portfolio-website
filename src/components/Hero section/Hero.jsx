@@ -50,7 +50,7 @@ const Hero = ({ currentTheme }) => {
           <source src={videoUrls[currentVideoIndex]} type="video/mp4" />
         </motion.video>
       </AnimatePresence>
-      <div className={Herostyles.videoOverlay}></div>
+      <div className={`${currentTheme==="light"?Herostyles.videoOverlayLight : Herostyles.videoOverlayDark}`}></div>
 
       {/* ----------- Text & Resume Section ----------- */}
       <div className="justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%] z-10">
