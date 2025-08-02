@@ -22,8 +22,8 @@ const letterVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      damping: 10,
-      stiffness: 200,
+      damping: 23,
+      stiffness: 1000,
      
     },
   },
