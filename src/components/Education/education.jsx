@@ -4,10 +4,12 @@ import styles from "./education.module.css";
 import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { GiGraduateCap } from "react-icons/gi";
 
-// Variants for the heading (individual letters)
-const headingContainerVariants = {
+const containerVariants = {
+  hidden: { opacity: 0.9 },
   visible: {
+    opacity: 1,
     transition: {
+      duration: 1,
       staggerChildren: 0.1,
     },
   },
@@ -54,7 +56,7 @@ const Education = ({ currentTheme }) => {
         className={`flex justify-center ${
           currentTheme === "light" ? styles.headinglight : styles.headingdark
         }`}
-        variants={headingContainerVariants}
+        variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}

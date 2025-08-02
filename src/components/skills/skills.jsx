@@ -56,7 +56,7 @@ const Skills = ({ currentTheme }) => {
       }`}
     >
       <motion.h2
-        className={`${styles.heading}   ${
+        className={`${styles.heading} flex justify-center ${
           currentTheme === "light" ? styles.titlelight : styles.titledark
         }`}
         variants={headingContainerVariants}

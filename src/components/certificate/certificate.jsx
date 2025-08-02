@@ -62,11 +62,11 @@ const Certificates = ({ currentTheme }) => {
       <motion.h2
         className={`${
           currentTheme === "light" ? styles.headerlight : styles.headerdark
-        }`}
+        } flex justify-center`} // Flex class added for letter animation
         variants={headingContainerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.8 }}
       >
         {letters.map((letter, index) => (
           <motion.span key={index} variants={letterVariants}>
