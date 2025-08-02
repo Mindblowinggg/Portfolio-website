@@ -10,7 +10,8 @@ import Typingeffect from "./typingeffect";
 import Lottie from "lottie-react";
 import PfpanimationLight from "./icons/man with laptop Light.json";
 import PfpanimationDark from "./icons/man with laptop Dark.json";
-import Helloanimation from "./icons/Hello.json";
+import HelloanimationDark from "./icons/helloDark.json";
+import HelloanimationLight from "./icons/helloLight.json";
 
 const Hero = ({ currentTheme }) => {
   const videoUrls = [
@@ -68,8 +69,8 @@ const Hero = ({ currentTheme }) => {
               : Herostyles.headingDark
           }`}
         >
-          <motion.div className="w-18 h-18">
-            <Lottie animationData={Helloanimation} />
+          <motion.div className={Herostyles.wave}>
+            <Lottie animationData={currentTheme==="light"? HelloanimationLight :HelloanimationDark} />
           </motion.div>
           Hello! I'm
           <motion.span

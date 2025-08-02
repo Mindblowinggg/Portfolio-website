@@ -47,11 +47,19 @@
   border-bottom: #a27b5c solid;
 }
 
+
+.wave{
+
+  width: 70px;
+  height: 70px;
+}
+
+
 .headingDark {
   font-size: 50px;
   width: max-content;
   text-align: center;
-   padding: 8px 30px 8px 15px;
+  padding: 8px 30px 8px 15px;
   color: white;
   background-color: rgba(0, 0, 0, 0.554);
 }
@@ -72,7 +80,7 @@
 .ptaglight {
   color: rgb(0, 0, 0);
   font-weight: 600;
-  
+
 }
 
 .ptagdark {
@@ -104,6 +112,23 @@
 
 @media (min-width: 0px) and (max-width: 500px) {
 
+
+.wave{
+  width: 40px;
+  height: 40px;
+}
+
+
+  .resumeBtnLight {
+
+    margin: 25px;
+
+  }
+
+  .resumeBtnDark {
+    margin: 25px;
+  }
+
   .imageBottom {
     width: 240px;
   }
@@ -120,12 +145,14 @@
     font-size: 25px;
     width: max-content;
     text-align: center;
+    padding: 0px 10px 0px 0px;
   }
 
   .headingLight {
     font-size: 25px;
     font-weight: 500;
     width: max-content;
+    padding: 0px 10px 0px 0px;
     text-align: center;
   }
 
