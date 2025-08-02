@@ -15,7 +15,6 @@
   object-fit: cover;
   z-index: -2;
   position: absolute;
-  /* important */
   top: 0;
   left: 0;
 }
@@ -39,8 +38,8 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.527),
-      rgb(255, 255, 255));
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0.7));
   z-index: -1;
 }
 
@@ -63,7 +62,7 @@
   padding: 8px 5px;
   text-align: center;
   color: #000000;
-  background-color: rgba(0, 0, 0, 0.169);
+  background-color: rgba(249, 249, 249, 0.75);
 }
 
 .spanlight {
@@ -72,11 +71,13 @@
 
 .ptaglight {
   color: rgb(0, 0, 0);
-
+  font-weight: 600;
+  
 }
 
 .ptagdark {
   color: rgb(255, 255, 255);
+  font-weight: 600;
 }
 
 
