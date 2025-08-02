@@ -2,11 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./aboutme.module.css";
 import { PiMicrophoneStageFill } from "react-icons/pi";
-import { FaGamepad } from "react-icons/fa";
-import { FaCarSide } from "react-icons/fa";
-import { GiDuration } from "react-icons/gi";
+import { FaGamepad, FaCarSide } from "react-icons/fa";
 
-// Variants for the main container's opacity
+// Variants for main container animation
 const containerVariants = {
   hidden: { opacity: 0.9 },
   visible: {
@@ -18,6 +16,7 @@ const containerVariants = {
   },
 };
 
+// Variants for animated heading letters
 const letterVariants = {
   hidden: { scale: 0.6, opacity: 1 },
   visible: {
@@ -31,12 +30,12 @@ const letterVariants = {
   },
 };
 
-// New variants for a smooth fade-in animation
+// Variants for fade-in animation of sections
 const fadeInVariants = {
-  hidden: { opacity: 0, y: 20 }, // Starts invisible and slightly below its position
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
-    y: 0, // Slides up to its final position
+    y: 0,
     transition: {
       duration: 0.8,
       ease: "easeOut",
@@ -58,83 +57,76 @@ const AboutMe = ({ currentTheme }) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
     >
-           {" "}
+      {/* Animated Heading */}
       <h2
         className={`flex justify-center ${
           currentTheme === "light" ? styles.headinglight : styles.headingdark
         }`}
       >
-               {" "}
         {letters.map((letter, index) => (
           <motion.span key={index} variants={letterVariants}>
-                        {letter === " " ? "\u00A0" : letter}         {" "}
+            {letter === " " ? "\u00A0" : letter}
           </motion.span>
         ))}
-             {" "}
       </h2>
-           {" "}
+
+      {/* Project Experience Card */}
       <motion.div
         className={styles.contentSection}
-        variants={fadeInVariants} // fadeInVariants लगाया गया है
+        variants={fadeInVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-               {" "}
         <div className={styles.experienceCard}>
-                    <h3>3+</h3>          <p>Project Completed</p>       {" "}
+          <h3>3+</h3>
+          <p>Project Completed</p>
         </div>
-             {" "}
       </motion.div>
-           {" "}
+
+      {/* Description */}
       <motion.p
         className={`${styles.description} lg:text-xl`}
-        variants={fadeInVariants} // fadeInVariants लगाया गया है
+        variants={fadeInVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-                Passionate front-end developer with a strong foundation in HTML,
-        CSS,         JSX, and React. I build intuitive and responsive web
-        applications         through self-initiated projects      {" "}
+        Passionate front-end developer with a strong foundation in HTML, CSS,
+        JSX, and React. I build intuitive and responsive web applications
+        through self-initiated projects.
       </motion.p>
-           {" "}
+
+      {/* Hobbies Section */}
       <motion.div
         className={styles.hobbySection}
-        variants={fadeInVariants} // fadeInVariants लगाया गया है
+        variants={fadeInVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-               {" "}
         <h3
-          className={` ${
+          className={
             currentTheme === "light"
               ? styles.hobbyTextlight
               : styles.hobbyTextdark
-          }`}
+          }
         >
-                    My Hobbies:        {" "}
+          My Hobbies:
         </h3>
-               {" "}
+
         <div className={styles.interestTags}>
-                   {" "}
           <div className={styles.tag}>
-                        <PiMicrophoneStageFill />            Performer          {" "}
+            <PiMicrophoneStageFill /> Performer
           </div>
-                   {" "}
           <div className={styles.tag}>
-                        <FaCarSide />            Travelling          {" "}
+            <FaCarSide /> Travelling
           </div>
-                   {" "}
           <div className={styles.tag}>
-                        <FaGamepad /> Gaming          {" "}
+            <FaGamepad /> Gaming
           </div>
-                 {" "}
         </div>
-             {" "}
       </motion.div>
-         {" "}
     </motion.div>
   );
 };
