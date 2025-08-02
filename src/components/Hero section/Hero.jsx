@@ -20,47 +20,36 @@ const Hero = ({ currentTheme }) => {
           : Herostyles.darkContainer
       }`}
     >
+      
       {/* ----------- Text & Resume Section ------------- */}
-      <div className="justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%]">
+      <div className="justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%] z-10">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className={`text-6xl flex ${
-            currentTheme === "light"
-              ? Herostyles.headingLight
-              : Herostyles.headingDark
+            currentTheme === "light" ? Herostyles.headingLight : Herostyles.headingDark
           }`}
         >
           Hello! I'm
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.7,
-              ease: "easeOut",
-              delay: 0.5,
-            }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
             className={`text-[#efae02] ml-3 ${
-              currentTheme === "light"
-                ? Herostyles.spanlight
-                : Herostyles.spandark
+              currentTheme === "light" ? Herostyles.spanlight : Herostyles.spandark
             } `}
           >
             Aman Kahar
           </motion.span>
         </motion.h1>
 
-        {/* Typing Effect Component */}
         <Typingeffect currentTheme={currentTheme} />
 
-        {/* Resume Button */}
         <a href="/RESUME.pdf" download="MyResume.pdf">
           <button
             className={`px-10 flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400 transform transition-transform duration-300 hover:scale-105 ${
-              currentTheme === "light"
-                ? Herostyles.resumeBtnLight
-                : Herostyles.resumeBtnDark
+              currentTheme === "light" ? Herostyles.resumeBtnLight : Herostyles.resumeBtnDark
             }`}
           >
             Resume
@@ -80,10 +69,7 @@ const Hero = ({ currentTheme }) => {
         className={Herostyles.imageBottom}
         initial={{ opacity: 0, y: 50, x: "-50%" }}
         animate={{ opacity: 1, y: 0, x: "-50%" }}
-        transition={{
-          duration: 1.2,
-          ease: "easeOut",
-        }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
       >
         <Lottie
           animationData={

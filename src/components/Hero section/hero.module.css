@@ -118,8 +118,17 @@
     width: 800px;
     text-align: center;
   }
-  
+}
 
+.backgroundVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
 }
 
 
