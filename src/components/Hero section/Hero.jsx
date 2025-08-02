@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // AnimatePresence import karein
+import { motion, AnimatePresence } from "framer-motion";
 import Herostyles from "./hero.module.css";
 import { FiDownloadCloud } from "react-icons/fi";
 import Reacticon from "./icons/reacticon";
@@ -10,13 +10,14 @@ import Typingeffect from "./typingeffect";
 import Lottie from "lottie-react";
 import PfpanimationLight from "./icons/man with laptop Light.json";
 import PfpanimationDark from "./icons/man with laptop Dark.json";
+import Helloanimation from "./icons/Hello.json";
 
 const Hero = ({ currentTheme }) => {
   const videoUrls = [
     "https://videos.pexels.com/video-files/2516160/2516160-hd_1920_1080_24fps.mp4",
     "https://videos.pexels.com/video-files/5377274/5377274-uhd_2560_1440_25fps.mp4",
     "https://videos.pexels.com/video-files/33230270/14159474_2560_1440_25fps.mp4",
-    "https://videos.pexels.com/video-files/5585983/5585983-hd_1080_1920_30fps.mp4"
+    "https://videos.pexels.com/video-files/5585983/5585983-hd_1080_1920_30fps.mp4",
   ];
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -50,20 +51,26 @@ const Hero = ({ currentTheme }) => {
           <source src={videoUrls[currentVideoIndex]} type="video/mp4" />
         </motion.video>
       </AnimatePresence>
-      <div className={`${currentTheme==="light"?Herostyles.videoOverlayLight : Herostyles.videoOverlayDark}`}></div>
+      <div
+        className={`${
+          currentTheme === "light"
+            ? Herostyles.videoOverlayLight
+            : Herostyles.videoOverlayDark
+        }`}
+      ></div>
 
       {/* ----------- Text & Resume Section ----------- */}
       <div className="justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%] z-10">
         <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className={`text-6xl flex ${
+          className={`text-6xl flex items-center ${
             currentTheme === "light"
               ? Herostyles.headingLight
               : Herostyles.headingDark
           }`}
         >
+          <motion.div className="w-18 h-18">
+            <Lottie animationData={Helloanimation} />
+          </motion.div>
           Hello! I'm
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -100,20 +107,6 @@ const Hero = ({ currentTheme }) => {
       <Htmlicon />
       <Jsicon />
       <Cssicon />
-
-      {/* ----------- Lottie Animation ----------- */}
-      <motion.div
-        className={Herostyles.imageBottom}
-        initial={{ opacity: 0, y: 50, x: "-50%" }}
-        animate={{ opacity: 1, y: 0, x: "-50%" }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      >
-        <Lottie
-          animationData={
-            currentTheme === "light" ? PfpanimationLight : PfpanimationDark
-          }
-        />
-      </motion.div>
     </div>
   );
 };
