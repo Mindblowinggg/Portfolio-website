@@ -8,7 +8,6 @@ const Typingeffect = ({ currentTheme }) => {
   const [typingSpeed, setTypingSpeed] = useState(90);
   const [showCursor, setShowCursor] = useState(true);
 
-  // कर्सर ब्लिंकिंग इफ़ेक्ट
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
@@ -16,7 +15,6 @@ const Typingeffect = ({ currentTheme }) => {
     return () => clearInterval(cursorInterval);
   }, []);
 
-  // मुख्य टाइपिंग और डिलीटिंग लॉजिक
   useEffect(() => {
     const texts = [
       "A FrontEnd Developer",
@@ -38,26 +36,23 @@ const Typingeffect = ({ currentTheme }) => {
     if (!isDeleting && typedText === texts[textIndex]) {
       setTypingSpeed(1500);
       setIsDeleting(true);
-    } 
-    else if (isDeleting && typedText === "") {
+    } else if (isDeleting && typedText === "") {
       if (textIndex === texts.length - 1) {
-        // आखिरी टेक्स्ट के बाद 3 सेकंड का लंबा पॉज़
-        setTypingSpeed(1000); 
+        setTypingSpeed(1000);
         setTimeout(() => {
           setIsDeleting(false);
-          setTextIndex(0); // इंडेक्स को 0 पर वापस सेट करें
+          setTextIndex(0);
         }, 1000);
         return;
       } else {
         setIsDeleting(false);
-        setTextIndex((prevIndex) => (prevIndex + 1));
+        setTextIndex((prevIndex) => prevIndex + 1);
         setTypingSpeed(500);
       }
     }
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-    
   }, [typedText, isDeleting, textIndex, typingSpeed]);
 
   return (
@@ -66,6 +61,7 @@ const Typingeffect = ({ currentTheme }) => {
         className={`text-3xl mt-5 ${
           currentTheme === "light" ? Herostyles.ptaglight : Herostyles.ptagdark
         }`}
+        style={{ overflowWrap: "break-word" }}
       >
         {typedText}
         <span

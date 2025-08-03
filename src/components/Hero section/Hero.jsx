@@ -65,7 +65,7 @@ const Hero = ({ currentTheme }) => {
       ></div>
 
       {/* ----------- Text & Resume Section ----------- */}
-      <div className="justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%] z-10">
+      <div className=" textsection justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%] z-10">
         <motion.h1
           className={`text-6xl flex items-center ${
             currentTheme === "light"
