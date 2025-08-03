@@ -23,14 +23,27 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width:0px) and (max-width: 500px) {
   .react-icon-container {
     bottom: 20%;
     left: 20%; 
     z-index: 900;
+    height: 35px;
+    width: 35px;
   }
 
-  .react-icon-container svg {
-    font-size: 50px;
-  }
+}
+
+@media (min-width: 500px) and (max-width: 800px){
+.react-icon-container{
+  position: absolute;
+    bottom: 20%;
+    height: 40px;
+    width: 40px;
+    left: 20%;
+    right: auto;
+    z-index: 900;
+}
+
+
 }

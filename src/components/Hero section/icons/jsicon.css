@@ -11,27 +11,31 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .js-icon-container {
-    bottom: 15%;
-    left: 10%;
-  }
 
-  .js-icon-container svg {
-    font-size: 50px;
-  }
-}
-
-@media (max-width: 480px) {
+@media (min-width:0px) and (max-width: 500px) {
   .js-icon-container {
     position: absolute;
-    /* Already defined, but good to ensure */
     bottom: 10%;
     height: 30px;
     width: 30px;
     right: 10%;
-    /* Adjust for very small screens */
     left: auto;
     z-index: 900;
   }
+}
+
+
+
+@media (min-width: 500px) and (max-width: 800px){
+   .js-icon-container {
+    position: absolute;
+    bottom: 5%;
+    height: 40px;
+    width: 40px;
+    right: 15%;
+    left: auto;
+    z-index: 900;
+  }
+
+  
 }

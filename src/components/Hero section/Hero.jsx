@@ -28,17 +28,14 @@ const Hero = ({ currentTheme }) => {
   };
 
   const placeholderImageUrl =
-    "https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"; // यह आपका URL है
+    "https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg";
 
   return (
     <div
       className={`${Herostyles.container} ${
-        currentTheme === "light"
-          ? Herostyles.lightContainer
-          : Herostyles.darkContainer
+        currentTheme === "light" ? Herostyles.lightContainer : Herostyles.darkContainer
       }`}
     >
-      {/* ----------- Background Video & Overlay ----------- */}
       <AnimatePresence>
         <motion.video
           key={currentVideoIndex}
@@ -51,26 +48,21 @@ const Hero = ({ currentTheme }) => {
           muted
           onEnded={handleVideoEnd}
           loop={false}
-          poster={placeholderImageUrl} // यहाँ पर URL का उपयोग किया गया है
+          poster={placeholderImageUrl}
         >
           <source src={videoUrls[currentVideoIndex]} type="video/mp4" />
         </motion.video>
       </AnimatePresence>
       <div
         className={`${
-          currentTheme === "light"
-            ? Herostyles.videoOverlayLight
-            : Herostyles.videoOverlayDark
+          currentTheme === "light" ? Herostyles.videoOverlayLight : Herostyles.videoOverlayDark
         }`}
       ></div>
 
-      {/* ----------- Text & Resume Section ----------- */}
-      <div className=" textsection justify-center flex flex-col items-center absolute top-[25%] md:top-[20%] left-[50%] -translate-x-[50%] z-10">
+      <div className={Herostyles.textsection}>
         <motion.h1
           className={`text-6xl flex items-center ${
-            currentTheme === "light"
-              ? Herostyles.headingLight
-              : Herostyles.headingDark
+            currentTheme === "light" ? Herostyles.headingLight : Herostyles.headingDark
           }`}
         >
           <motion.div className={Herostyles.wave}>
@@ -86,9 +78,7 @@ const Hero = ({ currentTheme }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
             className={`text-[#efae02] ml-3 ${
-              currentTheme === "light"
-                ? Herostyles.spanlight
-                : Herostyles.spandark
+              currentTheme === "light" ? Herostyles.spanlight : Herostyles.spandark
             }`}
           >
             Aman Kahar
@@ -100,9 +90,7 @@ const Hero = ({ currentTheme }) => {
         <a href="/RESUME.pdf" download="MyResume.pdf">
           <button
             className={`px-10 flex items-center justify-center cursor-pointer rounded-3xl py-3 mt-9 border-3 border-amber-400 transform transition-transform duration-300 hover:scale-105 ${
-              currentTheme === "light"
-                ? Herostyles.resumeBtnLight
-                : Herostyles.resumeBtnDark
+              currentTheme === "light" ? Herostyles.resumeBtnLight : Herostyles.resumeBtnDark
             }`}
           >
             Resume
@@ -111,12 +99,10 @@ const Hero = ({ currentTheme }) => {
         </a>
       </div>
 
-      {/* ----------- Icons ----------- */}
       <Reacticon />
       <Htmlicon />
       <Jsicon />
       <Cssicon />
-      {/* ----------- Lottie Animation ----------- */}
       <motion.div
         className={Herostyles.imageBottom}
         initial={{ opacity: 0, y: 50, x: "-50%" }}

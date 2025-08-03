@@ -12,25 +12,31 @@
   font-size: 70px;
 }
 
-@media (max-width: 768px) {
-  .html-icon-container {
-    bottom: 15%;
-    left: 10%;
-  }
 
-  .html-icon-container svg {
-    font-size: 50px;
-  }
-}
-
-@media (max-width: 480px) {
+@media (min-width:0px) and (max-width: 500px){
   .html-icon-container {
+   position: absolute;
     bottom: 10%;
-    left: 10%; 
+    height: 30px;
+    width: 30px;
+    left: 10%;
+    right: auto;
     z-index: 900;
   }
 
-  .html-icon-container svg {
-    font-size: 30px;
-  }
+ 
+}
+
+@media (min-width: 500px) and (max-width: 800px){
+.html-icon-container{
+  position: absolute;
+    bottom: 5%;
+    height: 40px;
+    width: 40px;
+    left: 10%;
+    right: auto;
+    z-index: 900;
+}
+
+
 }
