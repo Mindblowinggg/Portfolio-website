@@ -32,7 +32,7 @@ const Connect = ({ currentTheme }) => {
 
         {/* Instagram Card */}
         <a
-          href="https://www.instagram.com/marc_usb47/" 
+          href="/" 
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles.socialCard} ${
